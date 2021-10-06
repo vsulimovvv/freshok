@@ -1,0 +1,129 @@
+.dropdown {
+  position: relative;
+  z-index: 100;
+  max-width: 240px;
+
+  &__button {
+    background-color: var(--color-white);
+    color: var(--color-green-900);
+    padding: 16px 18px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-right: 30px;
+    padding-left: 40px;
+    position: relative;
+    transition: 150ms ease-in;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &::after {
+      background-image: url('../images/icons/chevron.svg');
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%) rotate(-90deg);
+      transition: 150ms ease-in;
+    }
+
+    &::before {
+      background-image: url('../images/icons/menu.svg');
+      width: 25px;
+      height: 17px;
+      top: 50%;
+      left: 18px;
+      transform: translateY(-50%);
+    }
+
+    svg {
+      width: 25px;
+      height: 17px;
+
+      &:nth-child(2) {
+        width: 4px;
+        height: 7px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+
+  &.active {
+    .dropdown__button::after {
+      transform: translateY(-50%) rotate(-270deg);
+    }
+
+    .dropdown__menu {
+      opacity: 1;
+      visibility: visible;
+      top: 49px;
+    }
+  }
+
+
+  &__menu {
+    border: 1px solid #EBEBEB;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 600px;
+    z-index: 9;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-top-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms ease-in;
+
+    // &.active {
+    //   opacity: 1;
+    //   visibility: visible;
+    //   top: 49px;
+    // }
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 24px;
+    position: relative;
+    transition: 200ms ease-in;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 100%;
+      background-color: var(--color-green-900);
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 150ms ease-in;
+    }
+
+    &:hover {
+      color: var(--color-green-900);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:hover {
+    .dropdown__button {
+      background-color: #E0EDCF;
+    }
+  }
+}

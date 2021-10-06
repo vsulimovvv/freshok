@@ -1,0 +1,49 @@
+.top {
+  text-align: center;
+
+  &__filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__filter {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    button {
+      color: var(--color-dark-500);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1.4;
+      letter-spacing: 0.03em;
+    }
+
+    @include divider();
+
+    &:hover {
+      &::after {
+        transform: scaleX(1)
+      }
+    }
+  }
+
+  .mixitup-control-active {
+    @include divider();
+
+    &::after {
+      transform: scaleX(1)
+    }
+  }
+
+  &__catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 48px;
+    transition: 150ms ease-in;
+  }
+}

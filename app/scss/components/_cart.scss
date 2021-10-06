@@ -1,0 +1,103 @@
+.cart {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: 250ms ease-in;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__wrapper {
+    max-width: 476px;
+    width: 100%;
+    background-color: var(--color-white);
+    height: 100%;
+
+    // товары прибить к низу
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    padding: 20px 24px 11px;
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--color-black);
+    margin-bottom: 12px;
+  }
+
+  &__reset {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--color-black);
+    text-transform: lowercase;
+  }
+
+  &__close {
+    position: absolute;
+    top: 33px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__list {
+    padding: 12px;
+    overflow: auto;
+    background-color: var(--color-silver-100);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__bottom {
+    margin-top: auto;
+  }
+
+  &__total {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--color-black);
+  }
+
+  &__button {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    text-transform: none;
+    width: 100%;
+    border-radius: 0px;
+  } 
+}

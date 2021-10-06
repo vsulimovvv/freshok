@@ -1,0 +1,30 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './components/header';
+@import './components/hero';
+@import './components/menu';
+@import './components/user-menu';
+@import './components/form';
+@import './components/advantages';
+@import './components/products-grid';
+@import './components/product';
+@import './components/footer';
+@import './components/socials';
+@import './components/dropdown';
+@import './components/cart';
+@import './components/product-cart';
+@import './components/form-search';
+@import './components/form-subscribe';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}

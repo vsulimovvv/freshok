@@ -1,0 +1,45 @@
+:root {
+  // * Color
+  --color-white: #fff;
+  --color-black: #000;
+  --color-red-900: #CF3E3B;
+  --color-yellow-900: #FFB800;
+  --color-orange-900: #FF7A00;
+
+  --color-green-900: #63A60F;
+  --color-green-dark: #4D800C;
+  --color-green-200: #E0EDCF;
+  --color-green-100: #EFF6E7;
+  --color-dark-900: #121212;
+  --color-dark-800: #31352B;
+  --color-dark-500: #505050;
+  --color-silver-600: #C1C1C1;
+  --color-silver-100: #f6f6f6;
+
+  // * Hover
+  --color-hover-link: #616161;
+
+
+  // * Border
+  --border-product: 1px solid rgba(17, 17, 17, 0.2);
+  --border-product-active: 1px solid var(--color-green-900);
+
+  // * Radius
+  --border-radius: 6px;
+  --border-radius-small: 3px;
+
+  // * Shadow
+  --box-focus: 0px 0px 0px 4px var(--color-green-200);
+  --box-focus-dark-btn: 0px 0px 0px 4px #b1d286;
+
+  // font-family: 'Ruda', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+
+  // * Gap
+  --gap-30: 30px;
+  --gap-48: 48px;
+
+  // * Width
+  --width-container: 1290px;
+
+}

@@ -88,11 +88,11 @@
   }
 
   &__img {
-    width: 100%;
-    padding-bottom: 72%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    img {
+      width: 100%;
+      max-height: 215px;
+      object-fit: contain;
+    }
   }
 
   &__bottom {
@@ -177,4 +177,8 @@
       fill: var(--color-white);
     }
   }
+}
+
+.product--stock {
+  height: 154px;
 }

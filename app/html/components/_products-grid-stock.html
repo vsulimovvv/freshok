@@ -1,28 +1,23 @@
 <section class="top section">
   <div class="container">
-    <h2 class="top__title section-title">Топовые товары</h2>
-    <div class="top__wrapper" data-ref="container-1">
+    <h2 class="top__title section-title">Акции</h2>
+    <!-- ! Для нескольких миксов -->
+    <div class="top__wrapper" data-ref="container-2">
       <ul class="top__filters filters">
         <li class="top__filter filters__item" data-filter="all">
           <button>Все товары</button>
         </li>
-        <li class="top__filter filters__item" data-filter=".fruits">
-          <button>Фрукты</button>
+        <li class="top__filter filters__item" data-filter=".new">
+          <button>Новинки</button>
         </li>
-        <li class="top__filter filters__item" data-filter=".vagetables">
-          <button>Овощи</button>
-        </li>
-        <li class="top__filter filters__item" data-filter=".drinks">
-          <button>Напитки</button>
-        </li>
-        <li class="top__filter filters__item" data-filter=".grocery">
-          <button>Бакалея</button>
+        <li class="top__filter filters__item" data-filter=".hit">
+          <button>Хиты</button>
         </li>
       </ul>
 
-      <ul class="top__catalog product-cards" id="top-catalog">
-        <li class="product-cards__item mix fruits">
-          <article class="product">
+      <ul class="top__catalog product-cards" id="stock-catalog">
+        <li class="product-cards__item mix new">
+          <article class="product product--stock">
             <div class="product__top">
               <div class="product__badges">
                 <span class="product__badge product__badge--new">Новинка</span>
@@ -34,8 +29,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="https://images.unsplash.com/photo-1618150663726-c166f0487fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Ананас">
+            <div class="product__img" style="background-image: url('images/products/product-1.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Ананас, 1кг</h3>
@@ -52,8 +46,8 @@
             </div>
           </article>
         </li>
-        <li class="product-cards__item mix fruits">
-          <article class="product">
+        <li class="product-cards__item mix new">
+          <article class="product product--stock">
             <div class="product__top">
               <button class="product__favorite">
                 <svg>
@@ -61,8 +55,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="images/products/product-2.png" alt="Лимон">
+            <div class="product__img" style="background-image: url('images/products/product-2.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Лимон, 1кг</h3>
@@ -77,8 +70,8 @@
             </div>
           </article>
         </li>
-        <li class="product-cards__item mix vagetables">
-          <article class="product">
+        <li class="product-cards__item mix hit">
+          <article class="product product--stock">
             <div class="product__top">
               <div class="product__badges">
                 <span class="product__badge product__badge--hit">Хит</span>
@@ -89,8 +82,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="images/products/product-3.png" alt="Питахайя">
+            <div class="product__img" style="background-image: url('images/products/product-3.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Питахайя красная с белой мякотью, 1шт</h3>
@@ -105,8 +97,8 @@
             </div>
           </article>
         </li>
-        <li class="product-cards__item mix vagetables">
-          <article class="product">
+        <li class="product-cards__item mix hit">
+          <article class="product product--stock">
             <div class="product__top">
               <div class="product__badges">
                 <span class="product__badge product__badge--new">Новинка</span>
@@ -117,8 +109,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="images/products/product-4.png" alt="Перец">
+            <div class="product__img" style="background-image: url('images/products/product-4.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Перец оранжевый, 1кг</h3>
@@ -132,8 +123,8 @@
             </div>
           </article>
         </li>
-        <li class="product-cards__item mix vagetables">
-          <article class="product">
+        <li class="product-cards__item mix hit">
+          <article class="product product--stock">
             <div class="product__top">
               <div class="product__badges">
                 <span class="product__badge product__badge--hit">Хит</span>
@@ -144,8 +135,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="images/products/product-5.png" alt="Морковь">
+            <div class="product__img" style="background-image: url('images/products/product-5.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Морковь молодая с бабушкиной грядки, 1кг</h3>
@@ -159,8 +149,8 @@
             </div>
           </article>
         </li>
-        <li class="product-cards__item mix drinks">
-          <article class="product">
+        <li class="product-cards__item mix new">
+          <article class="product product--stock">
             <div class="product__top">
               <div class="product__badges">
                 <span class="product__badge product__badge--sale">30%</span>
@@ -171,8 +161,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="images/products/product-6.png" alt="Напиток">
+            <div class="product__img" style="background-image: url('images/products/product-6.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
@@ -188,8 +177,8 @@
             </div>
           </article>
         </li>
-        <li class="product-cards__item mix drinks">
-          <article class="product">
+        <li class="product-cards__item mix new">
+          <article class="product product--stock">
             <div class="product__top">
               <div class="product__badges">
                 <span class="product__badge product__badge--new">Новинка</span>
@@ -200,8 +189,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="images/products/product-7.png" alt="Кофе">
+            <div class="product__img" style="background-image: url('images/products/product-7.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Кофе с коноплей органический Caffé Salomoni 250г</h3>
@@ -215,8 +203,8 @@
             </div>
           </article>
         </li>
-        <li class="product-cards__item mix grocery">
-          <article class="product">
+        <li class="product-cards__item mix hit">
+          <article class="product product--stock">
             <div class="product__top">
               <button class="product__favorite">
                 <svg>
@@ -224,8 +212,7 @@
                 </svg>
               </button>
             </div>
-            <div class="product__img">
-              <img src="images/products/product-8.png" alt="Кетчуп">
+            <div class="product__img" style="background-image: url('images/products/product-8.png');">
             </div>
             <div class="product__bottom">
               <h3 class="product__name">Кетчуп томатный детский органический Bio-Zentrale 500мл</h3>
@@ -241,6 +228,7 @@
         </li>
       </ul>
     </div>
+
     <button class="top__add button button--transparent" type="button">Показать еще</button>
   </div>
 </section>

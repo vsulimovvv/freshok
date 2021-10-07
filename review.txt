@@ -1,0 +1,45 @@
+- nav-menu поменять хавер
+
+Преимущества: поменять p на div,  и в div засунуть p
+
+Проверить в img alt 
+Переделать form - input
+
+footer-contacts
+
+visa - mastercard - не ссылка
+
+сделать nav всем блоком
+
+logo через img
+
+button-dropdown - убрать span
+убрать класс input
+
+user-menu там нет списка, первая - ссылка, остально кнопки
+
+В корзине нет тайтла
+
+поменять в корзине структуру
+
+оформить заказ - это ссылка
+
+hero - section
+
+h1 -> h2
+
+h1  - общий загалов, его спрятать
+cms контент
+
+купить сейчас - ссылка
+product => product-card
+
+h24 - тега img
+
+.product__prices >
+.product__price.product__price--old
+.product__price.product__price--new
+
+:ficus - :hover - :active
+
+убрать все повторения

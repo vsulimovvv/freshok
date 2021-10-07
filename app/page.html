@@ -55,17 +55,13 @@
   </div>
   <div class="header__bottom">
     <div class="container">
-      <div class="header__wrapper">
+      <nav class="header__wrapper">
         <a class="header__logo logo" href="#">
-          <svg>
-            <use xlink:href='images/sprite.svg#logo'></use>
-          </svg>
+          <img src="images/logo.svg" alt="логотип">
         </a>
 
         <div class="header__dropdown dropdown">
-          <button class="dropdown__button" type="button">
-            <span>Каталог продуктов</span>
-          </button>
+          <button class="dropdown__button" type="button">Каталог продуктов</button>
 
           <ul class="dropdown__menu">
             <li class="dropdown__item">
@@ -109,38 +105,24 @@
 
         <form class="header__search form-search" action="#">
           <div class="form-search__group">
-            <input class="form-search__input input" type="text" placeholder="Найти в магазине ...">
+            <label for="search"></label>
+            <input class="form-search__input input" id="search" type="search" name="search"
+              placeholder="Найти в магазине ...">
             <button class="form-search__button button button--black" type="submit">Поиск</button>
           </div>
         </form>
 
-        <ul class="header__user-menu user-menu">
-          <li class="user-menu__item">
-            <a class="user-menu__link" href="#">
-
-              <svg>
-                <use xlink:href='images/sprite.svg#user-link'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="user-menu__item">
-            <a class="user-menu__link" href="#">
-              <span class="user-menu__amount">12</span>
-              <svg>
-                <use xlink:href='images/sprite.svg#favorite-link'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="user-menu__item cart-btn" id="cart-btn">
-            <a class="user-menu__link" href="#">
-              <span class="user-menu__amount">12</span>
-              <svg>
-                <use xlink:href='images/sprite.svg#cart-link'></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+        <div class="header__user-menu user-menu">
+          <a class="user-menu__item user-menu__item--user" href="#">
+          </a>
+          <button class="user-menu__item user-menu__item--favorite" type="button" aria-label="Посмотреть избранное">
+            <span class="user-menu__amount">12</span>
+          </button>
+          <button class="user-menu__item cart-btn user-menu__item--cart" type="button" id="cart-btn" aria-label="Открыть корзину">
+            <span class="user-menu__amount">12</span>
+          </button>
+        </div>
+      </nav>
     </div>
   </div>
 

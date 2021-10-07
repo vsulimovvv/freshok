@@ -2,21 +2,19 @@
   display: flex;
 
   &__item {
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-  }
-
-  &__link {
     position: relative;
     display: block;
-
+    cursor: pointer;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius-small);
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
 
     svg {
       width: 32px;
@@ -28,6 +26,24 @@
 
     &:hover {
       background-color: var(--color-hover-link);
+    }
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--user {
+      background-image: url('../images/icons/user-link.svg');
+      background-size: 25px 32px;
+    }
+
+    &--favorite {
+      background-image: url('../images/icons/favorite-link.svg');
+      background-size: 32px 28px;
+    }
+
+    &--cart {
+      background-image: url('../images/icons/cart-link.svg');
+      background-size: 32px 30px;
     }
   }
 

@@ -1,5 +1,11 @@
-.top {
+.products-grid {
   text-align: center;
+  padding: 72px 0;
+  background-color: #F5F5F5;
+
+  &--stock {
+    margin-bottom: 70px;
+  }
 
   &__filters {
     display: flex;
@@ -45,5 +51,10 @@
     gap: 30px;
     margin-bottom: 48px;
     transition: 150ms ease-in;
+  }
+
+  &__add {
+    text-transform: none;
+    // background-color: var(--color-green-900);
   }
 }

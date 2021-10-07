@@ -1,0 +1,31 @@
+.news {
+  margin-bottom: 72px;
+
+  &__title {
+    font-family: 'Ruda', sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-30);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--gap-30);
+  }
+
+  &__all {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: #63A60E;
+  }
+}

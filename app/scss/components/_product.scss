@@ -8,6 +8,7 @@
   border-radius: var(--border-radius);
   transition: 150ms ease-in;
   position: relative;
+  background-color: var(--color-white);
 
   &:hover {
     border: var(--border-product-active);
@@ -53,6 +54,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+    text-transform: uppercase;
   }
 
   &__badge {
@@ -116,6 +118,7 @@
   &__price {
     display: flex;
     flex-direction: column;
+    font-weight: 600;
     font-size: 14px;
     line-height: 1;
     letter-spacing: 0.03em;
@@ -131,6 +134,7 @@
     overflow: hidden;
     z-index: 1;
     margin-bottom: 5px;
+    font-weight: 400;
 
     &::after {
       position: absolute;
@@ -180,5 +184,80 @@
 }
 
 .product--stock {
-  height: 154px;
+  display: flex;
+  padding: 12px;
+  min-height: 124px;
+  position: relative;
+
+  .product__img {
+    flex-shrink: 0;
+    margin-right: 12px;
+
+    img {
+      max-width: 100px;
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+
+  .product__bottom {
+    padding: 0;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .product__rating {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-yellow-900);
+    }
+  }
+
+  .product__availability {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: var(--color-green-900);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .product__name {
+    margin-bottom: auto;
+  }
+
+  .product__price {
+    flex-direction: row;
+    font-size: 20px;
+    align-items: flex-end;
+
+    .price__new {
+      margin-right: 12px;
+    }
+
+    .price__old {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  .product__grade {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 2px;
+  }
 }

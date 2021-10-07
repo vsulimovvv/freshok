@@ -29,7 +29,7 @@ togglePopup();
 
 const sliderWithSlideOnePerView = (sliderSelector) => {
   const slider = document.querySelector(sliderSelector);
-  
+
   if (slider) {
     const swiper = new Swiper(slider, {
       slidesPerView: 1,
@@ -41,6 +41,21 @@ const sliderWithSlideOnePerView = (sliderSelector) => {
   }
 }
 sliderWithSlideOnePerView('.hero-slider');
+
+const sliderBrands = (sliderSelector) => {
+  const slider = document.querySelector(sliderSelector);
+
+  if (slider) {
+    const swiper = new Swiper(slider, {
+      loop: true,
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+      spaceBetween: 140,
+      loopFillGroupWithBlank: true,
+    });
+  }
+}
+sliderBrands('.brands__slider');
 
 const mix = () => {
   const containerEl1 = document.querySelector('[data-ref="container-1"]');

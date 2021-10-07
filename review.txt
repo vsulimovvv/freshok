@@ -1,45 +1,46 @@
-- nav-menu поменять хавер
+- nav-menu поменять хавер + 
 
-Преимущества: поменять p на div,  и в div засунуть p
+- Преимущества: поменять p на div,  и в div засунуть p 
 
-Проверить в img alt 
+- Проверить в img alt 
 Переделать form - input
 
-footer-contacts
+- footer-contacts
 
-visa - mastercard - не ссылка
+- visa - mastercard - не ссылка
 
-сделать nav всем блоком
+- сделать nav всему блоку
 
-logo через img
+- logo через img
 
-button-dropdown - убрать span
-убрать класс input
+- button-dropdown - убрать span
+- убрать класс input
 
-user-menu там нет списка, первая - ссылка, остально кнопки
+- user-menu там нет списка, первая - ссылка, остально кнопки
 
-В корзине нет тайтла
+??? В корзине нет тайтла ???
 
-поменять в корзине структуру
+?? поменять в корзине структуру ??
 
-оформить заказ - это ссылка
+- оформить заказ - это ссылка
 
-hero - section
+- hero - section
 
-h1 -> h2
+- h1 -> h2
 
-h1  - общий загалов, его спрятать
-cms контент
+- h1  - общий загалов, его спрятать
+- cms контент
 
-купить сейчас - ссылка
-product => product-card
+- купить сейчас - ссылка
+- product => product-card
 
-h24 - тега img
+h24 - тега img ???
 
-.product__prices >
-.product__price.product__price--old
-.product__price.product__price--new
+-
+  .product__prices >
+  .product__price.product__price--old
+  .product__price.product__price--new
 
-:ficus - :hover - :active
+- :focus - :hover - :active
 
-убрать все повторения
+- убрать все повторения

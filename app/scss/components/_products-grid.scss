@@ -1,10 +1,11 @@
 .products-grid {
   text-align: center;
   padding: 72px 0;
-  background-color: #F5F5F5;
+
 
   &--stock {
     margin-bottom: 70px;
+    background-color: #F5F5F5;
   }
 
   &__filters {

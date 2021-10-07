@@ -15,3 +15,14 @@
   }
 }
 
+@mixin breakpointsMaxW($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpointsMaxH($bp) {
+  @media (max-height: $bp) and (orientation: landscape) {
+    @content;
+  }
+}

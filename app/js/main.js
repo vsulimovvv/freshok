@@ -52,14 +52,15 @@ const sliderBrands = (sliderSelector) => {
       slidesPerGroup: 6,
       spaceBetween: 140,
       loopFillGroupWithBlank: true,
+      grabCursor: true
     });
   }
 }
 sliderBrands('.brands__slider');
 
-const mix = () => {
-  const containerEl1 = document.querySelector('[data-ref="container-1"]');
-  const containerEl2 = document.querySelector('[data-ref="container-2"]');
+const mix = (mixContainer1, mixContainer2) => {
+  const containerEl1 = document.querySelector(mixContainer1);
+  const containerEl2 = document.querySelector(mixContainer2);
 
   const config = {
     controls: {
@@ -67,10 +68,12 @@ const mix = () => {
     }
   }
 
-  const mixer1 = mixitup(containerEl1, config);
-  const mixer2 = mixitup(containerEl2, config);
+  if (containerEl1 || containerEl2) {
+    const mixer1 = mixitup(containerEl1, config);
+    const mixer2 = mixitup(containerEl2, config);
+  }
 }
-mix();
+mix('[data-ref="container-1"]', '[data-ref="container-2"]');
 
 
 // const togglePopup = (popupBtnEl, popupParentEl, popupContentEl, popupCloseBtn, activeClass) => {

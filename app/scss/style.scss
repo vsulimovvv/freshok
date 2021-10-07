@@ -1,3 +1,4 @@
+@import 'reset';
 @import 'vars';
 @import 'mixins';
 @import 'fonts';
@@ -7,10 +8,9 @@
 @import './components/hero';
 @import './components/menu';
 @import './components/user-menu';
-@import './components/form';
 @import './components/advantages';
 @import './components/products-grid';
-@import './components/product';
+@import './components/product-card';
 @import './components/footer';
 @import './components/socials';
 @import './components/dropdown';
@@ -22,13 +22,3 @@
 @import './components/brands';
 @import './components/news';
 @import './components/news-card';
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}

@@ -16,6 +16,12 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    opacity: 0.5;
+    transition: 150ms ease-in;
+
+    &:hover {
+      opacity: 1;
+    }
 
     &--sprite {
       background-image: url('../images/brands/brand-1.svg');

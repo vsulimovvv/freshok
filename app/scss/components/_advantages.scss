@@ -9,6 +9,7 @@
     gap: 65px;
     max-width: 890px;
     margin: 0 auto;
+    line-height: 1.4;
   }
 
   &__item {
@@ -51,14 +52,12 @@
   &__title {
     font-weight: 600;
     font-size: 16px;
-    line-height: 1.4;
     color: var(--color-dark-900);
     margin-bottom: 6px;
   }
 
   &__descr {
     font-size: 14px;
-    line-height: 1.4;
     color: var(--color-dark-500);
   }
 }

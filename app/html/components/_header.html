@@ -83,7 +83,7 @@
         <form class="header__search form-search" action="#">
           <div class="form-search__group">
             <label for="search"></label>
-            <input class="form-search__input input" id="search" type="search" name="search"
+            <input class="form-search__input" id="search" type="search" name="search"
               placeholder="Найти в магазине ...">
             <button class="form-search__button button button--black" type="submit">Поиск</button>
           </div>
@@ -95,7 +95,8 @@
           <button class="user-menu__item user-menu__item--favorite" type="button" aria-label="Посмотреть избранное">
             <span class="user-menu__amount">12</span>
           </button>
-          <button class="user-menu__item cart-btn user-menu__item--cart" type="button" id="cart-btn" aria-label="Открыть корзину">
+          <button class="user-menu__item cart-btn user-menu__item--cart" type="button" id="cart-btn"
+            aria-label="Открыть корзину">
             <span class="user-menu__amount">12</span>
           </button>
         </div>
@@ -106,7 +107,7 @@
   <div class="cart">
     <div class="cart__wrapper">
       <div class="cart__top">
-        <h2 class="cart__title">Корзина</h2>
+        <h3 class="cart__title">Корзина</h3>
         <button class="cart__reset" type="button">очистить корзину</button>
         <button class="cart__close" aria-label="Закрыть корзину">
           <svg>
@@ -116,48 +117,17 @@
       </div>
       <ul class="cart__list">
         <li class="cart__item">
-          <article class="product-cart">
-            <div class="product-cart__img" style="background-image: url('images/products/product-1.png');"></div>
-            <div class="product-cart__info">
-              <span class="product-cart__name">Ананас, 1 кг</span>
-              <span class="product-cart__price" id="item-one-price">
-                999₽
-              </span>
-              <span></span>
-            </div>
-            <div class="product-cart__right">
-              <div class="product-cart__actions">
-                <button class="product-cart__action button button--green" type="button" id="decrease"
-                  aria-label="Уменьшить на 1">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#minus"></use>
-                  </svg>
-                </button>
-                <span class="product-cart__quantity">1</span>
-                <button class="product-cart__action button button--green" type="button" id="increase"
-                  aria-label="Увеличить на 1">+</button>
-              </div>
-              <span class="product-cart__price price" id="item-all-price">999</span>
-              <span>₽</span>
-            </div>
-
-            <button class="product-cart__close" type="button" aria-label="Закрыть корзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#close"></use>
-              </svg>
-            </button>
-          </article>
+          <!-- Здесь сделать продукт с модификтаром -->
         </li>
-
       </ul>
 
       <div class="cart__bottom">
         <div class="cart__total">
           <span>Товаров на сумму</span>
-          <span class="cart__total-price"></span>
+          <span class="cart__total-price">9999</span>
         </div>
         <!-- Тут нужна форма? -->
-        <button class="cart__button button button--green" type="button">Оформить заказ</button>
+        <a class="cart__button button button--green" href="#">Оформить заказ</a>
       </div>
     </div>
 

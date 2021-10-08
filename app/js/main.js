@@ -13,6 +13,26 @@ const toggleDropdown = () => {
 };
 toggleDropdown();
 
+const toggleSearch = () => {
+  const popupParent = document.querySelector('.header__search');
+  const popupBtn = document.querySelector('.user-menu__item--search');
+  if (popupParent) {
+
+    popupBtn.addEventListener('click', e => {
+      popupParent.classList.toggle('active')
+    })
+
+    // popupParent.addEventListener('click', function (e) {
+    //   let target = e.target;
+
+    //   if (target.matches('.user-menu__item--search')) {
+    //     this.classList.toggle('active');
+    //   }
+    // })
+  }
+};
+toggleSearch();
+
 const togglePopup = () => {
   const popupParent = document.querySelector('.header');
   const popupContent = document.querySelector('.cart');

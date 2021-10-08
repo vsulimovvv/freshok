@@ -11,12 +11,21 @@
     text-transform: uppercase;
     padding-top: 14px;
     padding-bottom: 14px;
+
+    @include breakpointsMaxW($bp-420) {
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include breakpointsMaxW($bp-991) {
+      // display: none;
+    }
   }
 
   &__menu {
@@ -25,6 +34,23 @@
 
   &__logo {
     margin-right: 24px;
+
+    &--mobile {
+      display: none;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+
+      &--mobile {
+        display: block;
+        width: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 
   &__info {
@@ -37,6 +63,15 @@
       fill: var(--color-white);
       margin-right: 12px;
     }
+
+    @include breakpointsMaxW($bp-991) {
+      width: 100%;
+      justify-content: flex-end;
+
+      svg {
+        margin-right: 0;
+      }
+    }
   }
 
   &__address {
@@ -48,17 +83,49 @@
     padding-bottom: 25px;
     background-color: var(--color-green-900);
     font-size: 14px;
+
+    @include breakpointsMaxW($bp-420) {
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
   }
 
   &__dropdown {
     margin-right: var(--gap-30);
     max-width: 240px;
     width: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
   }
 
   &__search {
+    max-width: 576px;
     margin-right: 46px;
     height: 50px;
+
+    @include breakpointsMaxW($bp-768) {
+      position: absolute;
+
+      z-index: 100;
+      width: 100%;
+      max-width: 100%;
+      left: 0;
+
+      // display: none;
+      visibility: hidden;
+      opacity: 0;
+      bottom: -30px;
+      transition: 200ms ease;
+
+      &.active {
+        // display: block;
+        visibility: visible;
+        opacity: 1;
+        bottom: -50px;
+      }
+    }
   }
 
   &__user-menu {
@@ -67,6 +134,11 @@
     justify-content: space-between;
     align-items: center;
     margin-left: auto;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-left: auto;
+      width: auto;
+    }
   }
 
   &__item {
@@ -77,38 +149,68 @@
 
   &__link {
     position: relative;
-    display: block;
-    padding-left: 44px;
+    display: flex;
+    align-items: center;
     transition: 150ms ease-in;
+
+    @include breakpointsMaxW($bp-991) {
+      span {
+        display: none;
+      }
+    }
 
     &:hover {
       opacity: 0.7;
     }
+  }
 
-    &::after {
-      position: absolute;
-      content: '';
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      width: 32px;
-      height: 22px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+  &__toggle {
+    display: none;
+
+    svg {
+      fill: var(--color-white);
+      width: 30px;
+      height: 20px;
     }
 
-    &--address {
-      &::after {
-        background-image: url('../images/icons/delivery.svg');
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: var(--border-radius-small);
+      transition: 150ms ease-in;
+
+      &:hover {
+        background-color: var(--color-dark-500);
       }
-    }
 
-    &--tel {
-      padding-left: 37px;
+      span {
+        width: 30px;
+        height: 2px;
+        background-color: var(--color-white);
+        position: relative;
 
-      &::after {
-        background-image: url('../images/icons/tel.svg');
+        &::after,
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 2px;
+          left: 0;
+          background-color: var(--color-white);
+        }
+
+        &::after {
+          transform: translateY(-9px);
+        }
+
+        &::before {
+          transform: translateY(9px);
+        }
+
       }
     }
   }

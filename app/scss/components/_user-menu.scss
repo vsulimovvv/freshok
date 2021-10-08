@@ -1,6 +1,8 @@
 .user-menu {
   display: flex;
 
+  @include breakpointsMaxW($bp-768) {}
+
   &__item {
     position: relative;
     display: block;
@@ -11,6 +13,21 @@
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius-small);
+
+    &:nth-child(1) {
+      display: none;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      &:nth-child(1) {
+        display: block;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
 
     &:not(:last-child) {
       margin-right: 12px;
@@ -30,6 +47,11 @@
 
     background-repeat: no-repeat;
     background-position: center;
+
+    &--search {
+      background-image: url('../images/icons/search-link.svg');
+      background-size: 25px 32px;
+    }
 
     &--user {
       background-image: url('../images/icons/user-link.svg');

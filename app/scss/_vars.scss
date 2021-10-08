@@ -16,10 +16,6 @@
   --color-silver-600: #C1C1C1;
   --color-silver-100: #f6f6f6;
 
-  // * Hover
-  --color-hover-link: #616161;
-
-
   // * Border
   --border-product: 1px solid rgba(17, 17, 17, 0.2);
   --border-product-active: 1px solid var(--color-green-900);
@@ -45,8 +41,9 @@
 }
 
 // * breakpointsMaxW
+$bp-1290: 1290px;
 $bp-991: 991px;
 $bp-768: 768px;
 $bp-650: 650px;
 $bp-576: 576px;
-$bp-375: 375px;
+$bp-420: 420px;

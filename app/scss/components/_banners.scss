@@ -3,9 +3,22 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--gap-30);
-    height: 300px;
+
+    @include breakpointsMaxW($bp-1290) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      // grid-template-rows: repeat(3, 1fr);
+    }
   }
 
   &__item {
@@ -13,8 +26,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-radius: var(--border-radius);
 
-    height: 100%;
+    min-height: 300px;
     width: 100%;
 
     display: flex;
@@ -23,6 +37,7 @@
     align-items: flex-start;
 
     padding-left: 32px;
+    padding-right: 32px;
     text-transform: uppercase;
     z-index: 1;
 
@@ -38,6 +53,14 @@
       opacity: 0;
       visibility: hidden;
       transition: 250ms ease-in;
+    }
+
+    &--big {
+      grid-column: 1/3;
+
+      @include breakpointsMaxW($bp-991) {
+        grid-column: 1/2;
+      }
     }
 
     &>* {
@@ -61,22 +84,10 @@
         }
       }
     }
-  }
 
-  &__left {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 32px;
-  }
-
-  &__right {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-30);
+    @include breakpointsMaxW($bp-1290) {
+      padding: 20px;
+    }
   }
 
   &__text {
@@ -94,6 +105,10 @@
     font-size: 30px;
     line-height: 1.4;
     margin-bottom: 12px;
+
+    @include breakpointsMaxW($bp-991) {
+      font-size: 20px;
+    }
   }
 
   &__link {

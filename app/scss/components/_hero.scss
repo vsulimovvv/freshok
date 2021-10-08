@@ -18,6 +18,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include breakpointsMaxW($bp-768) {
+      min-height: 420px;
+    }
+
+    @include breakpointsMaxW($bp-420) {
+      min-height: 320px;
+    }
   }
 
   &__offer {
@@ -34,6 +42,15 @@
     max-width: var(--width-container);
     width: 100%;
     margin: 0 auto;
+
+    @include breakpointsMaxW($bp-768) {
+      min-height: 265px;
+      padding: 15px;
+    }
+
+    @include breakpointsMaxW($bp-420) {
+      min-height: 210px;
+    }
   }
 
   &__slides {
@@ -43,6 +60,11 @@
   &__descr {
     line-height: 1.4;
     color: var(--color-dark-500);
+    margin-bottom: 35px;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-bottom: 24px;
+    }
   }
 
   &__title {
@@ -53,6 +75,32 @@
   &__button {
     margin-top: auto;
     text-transform: none;
+  }
+
+  &__dots {
+    display: none;
+
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff !important;
+        border: 1px solid #C1C1C1;
+        margin: 0 !important;
+
+        &:not(:last-child) {
+          margin-right: 12px !important;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: var(--color-green-900) !important;
+        border: 1px solid var(--color-green-900);
+      }
+    }
   }
 
   .swiper-button-prev,
@@ -96,6 +144,10 @@
 
     top: 50%;
     transform: translateY(-50%);
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
   }
 
   .swiper-button-next {

@@ -1,13 +1,15 @@
 const toggleDropdown = () => {
   const popupParent = document.querySelector('.dropdown');
+  if (popupParent) {
 
-  popupParent.addEventListener('click', function (e) {
-    let target = e.target;
+    popupParent.addEventListener('click', function (e) {
+      let target = e.target;
 
-    if (target.closest('.dropdown__button')) {
-      this.classList.toggle('active');
-    }
-  })
+      if (target.closest('.dropdown__button')) {
+        this.classList.toggle('active');
+      }
+    })
+  }
 };
 toggleDropdown();
 
@@ -15,15 +17,17 @@ const togglePopup = () => {
   const popupParent = document.querySelector('.header');
   const popupContent = document.querySelector('.cart');
 
-  popupParent.addEventListener('click', e => {
-    let target = e.target;
+  if (popupParent && popupContent) {
+    popupParent.addEventListener('click', e => {
+      let target = e.target;
 
-    if (target.closest('.cart-btn')) {
-      popupContent.classList.add('active')
-    } else if (target.closest('.cart__close') || target === popupContent) {
-      popupContent.classList.remove('active')
-    }
-  })
+      if (target.closest('.cart-btn')) {
+        popupContent.classList.add('active')
+      } else if (target.closest('.cart__close') || target === popupContent) {
+        popupContent.classList.remove('active')
+      }
+    })
+  }
 };
 togglePopup();
 
@@ -36,6 +40,10 @@ const sliderWithSlideOnePerView = (sliderSelector) => {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".hero__dots",
+        clickable: true,
       },
     });
   }
@@ -50,9 +58,35 @@ const sliderBrands = (sliderSelector) => {
       loop: true,
       slidesPerView: 6,
       slidesPerGroup: 6,
-      spaceBetween: 140,
+
       loopFillGroupWithBlank: true,
-      grabCursor: true
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        420: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+        576: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+        768: {
+          slidesPerView: 5,
+          slidesPerGroup: 5,
+          spaceBetween: 93,
+        },
+        991: {
+          slidesPerView: 6,
+          slidesPerGroup: 6,
+          spaceBetween: 100,
+        },
+        1290: {
+          spaceBetween: 140,
+        }
+      }
     });
   }
 }

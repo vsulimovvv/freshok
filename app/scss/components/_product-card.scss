@@ -9,6 +9,8 @@
   transition: 150ms ease-in;
   position: relative;
   background-color: var(--color-white);
+  
+  // justify-self: center;
 
   &:hover {
     transform: translateY(-6px);

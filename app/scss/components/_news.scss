@@ -7,12 +7,24 @@
     text-transform: uppercase;
     letter-spacing: 0.03em;
     margin-bottom: 0;
+
+    @include breakpointsMaxW($bp-650) {
+      margin-bottom: 12px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap-30);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-650) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__top {
@@ -20,6 +32,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--gap-30);
+
+    @include breakpointsMaxW($bp-650) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__all {

@@ -56,6 +56,10 @@ body {
   position: relative;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+
+  @include breakpointsMaxW($bp-420) {
+    font-size: 24px;
+  }
 }
 
 .logo {
@@ -182,5 +186,13 @@ body {
 
   span {
     color: var(--color-red-900);
+  }
+
+  @include breakpointsMaxW($bp-768) {
+    font-size: 40px;
+  }
+
+  @include breakpointsMaxW($bp-420) {
+    font-size: 20px;
   }
 }

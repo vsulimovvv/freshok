@@ -10,6 +10,11 @@
     max-width: 890px;
     margin: 0 auto;
     line-height: 1.4;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      max-width: 375px;
+    }
   }
 
   &__item {
@@ -17,6 +22,11 @@
     width: 100%;
     padding-left: 75px;
     position: relative;
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 100%;
+    }
+
 
     &::after {
       position: absolute;

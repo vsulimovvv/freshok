@@ -7,13 +7,34 @@ body {
   line-height: 1.2;
   position: relative;
   transition: 200ms ease-in;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  &.overlay {
+    transform: scale(1.05, 1.025);
+  }
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
+// header {
+//   transition: 200ms ease-in-out;
+
+//   &.overlay {
+//     transform: translateX(10px) scale(0.9);
+//   }
+// }
+
+// .hero {
+//   transition: 200ms ease-in-out;
+
+//   &.overlay {
+//     transform: translateX(10px) scale(0.9);
+//   }
+// }
 
 // Для прибития футера к низу
+
 html,
 body {
   height: 100%;
@@ -73,8 +94,6 @@ body {
     height: 100%;
     fill: var(--color-white);
   }
-
-
 }
 
 .button {

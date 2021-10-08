@@ -43,3 +43,15 @@
     }
   }
 }
+
+.socials--mobile {
+  padding-left: 15px;
+  @include breakpointsMaxW($bp-420) {
+    justify-content: flex-start;
+  }
+margin-bottom: 24px;
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}

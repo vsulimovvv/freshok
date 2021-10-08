@@ -51,6 +51,33 @@ const togglePopup = () => {
 };
 togglePopup();
 
+const togglePopup2 = () => {
+  const openBtn = document.querySelector('.header__toggle');
+  const closeBtn = document.querySelector('.mobile-menu__close');
+  const menuContent = document.querySelector('.mobile-menu');
+  const body = document.querySelector('body');
+  // const hero = document.querySelector('.hero');
+
+  if (openBtn && menuContent) {
+    openBtn.addEventListener('click', e => {
+      menuContent.classList.add('active');
+      body.classList.add('no-scroll');
+      // hero.classList.add('overlay');
+    });
+    closeBtn.addEventListener('click', e => {
+      menuContent.classList.remove('active');
+      body.classList.remove('no-scroll');
+      // hero.classList.remove('overlay');
+    });
+    menuContent.addEventListener('click', e => {
+      menuContent.classList.remove('active');
+      body.classList.remove('no-scroll');
+      // hero.classList.remove('overlay');
+    });
+  }
+};
+togglePopup2();
+
 const sliderWithSlideOnePerView = (sliderSelector) => {
   const slider = document.querySelector(sliderSelector);
 

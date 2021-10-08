@@ -1,0 +1,51 @@
+.contacts {
+  &__address {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+
+    a {
+      padding-left: 55px;
+      font-size: 18px;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &--tel,
+    &--location {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 24px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--tel {
+      &::after {
+        background-image: url('../images/icons/tel-black.svg');
+        height: 24px;
+      }
+    }
+
+    &--location {
+      &::after {
+        background-image: url('../images/icons/location.svg');
+        height: 32px;background-repeat: no-repeat;
+      }
+    }
+  }
+
+}

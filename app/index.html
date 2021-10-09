@@ -21,7 +21,7 @@
 
 <body>
   <div class="wrapper">
-    <div class="mobile-menu active">
+    <div class="mobile-menu">
   <div class="mobile-menu__wrapper">
 
     <div class="mobile-menu__top">
@@ -240,9 +240,29 @@
         </button>
       </div>
       <ul class="cart__list">
-        <li class="cart__item">
-          <!-- Здесь сделать продукт с модификтаром -->
-        </li>
+        <!-- <li class="cart__item">
+          <article class="product-card product-card--cart">
+            <div class="product-card__img">
+              <img
+                src="https://images.unsplash.com/photo-1618150663726-c166f0487fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="Ананас">
+            </div>
+            <div class="product-card__bottom">
+              <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+              <div class="product-card__prices">
+                <span class="product-card__price product-card__price--new">999 ₽</span>
+              </div>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action product-card__action--decrease">-</button>
+              <input class="product-card__quantity" type="number" value="2" data-price="999" readonly>
+              <button class="product-card__action product-card__action--increase">+</button>
+              <div class="product-card__subtotal-price"> </div>
+            </div>
+
+            <button class="product-card__close" type="button" aria-label="Удалить товар из корзину"></button>
+          </article>
+        </li>  -->
       </ul>
 
       <div class="cart__bottom">
@@ -372,15 +392,14 @@
             <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
             <div class="product-card__prices">
               <span class="product-card__price product-card__price--old">1999 ₽ </span>
-              <span class="product-card__price product-card__price--new">999 ₽ </span>
+              <span class="product-card__price product-card__price--new">199 ₽ </span>
             </div>
 
-            <button class="product-card__cart" type="button" aria-label="Добавть в карзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
-            </button>
+            <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
           </div>
+          <!-- <div class="product-card__toast">
+            dadasd
+          </div> -->
         </article>
       </li>
       <li class="products-grid__item mix fruits">
@@ -399,12 +418,10 @@
             <h3 class="product-card__name"><a href="#">Лимон, 1кг</a></h3>
             <div class="product-card__prices">
               <span class="product-card__price product-card__price--old">1999 ₽ </span>
-              <span class="product-card__price product-card__price--new">999 ₽ </span>
+              <span class="product-card__price product-card__price--new">299 ₽ </span>
             </div>
             <button class="product-card__cart" type="button" aria-label="Добавть в корзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
+
             </button>
           </div>
         </article>
@@ -428,17 +445,15 @@
             <h3 class="product-card__name"><a href="#">Питахайя красная с белой мякотью, 1шт</a></h3>
             <div class="product-card__prices">
               <span class="product-card__price product-card__price--old">1999 ₽ </span>
-              <span class="product-card__price product-card__price--new">999 ₽ </span>
+              <span class="product-card__price product-card__price--new">399 ₽ </span>
             </div>
             <button class="product-card__cart" type="button" aria-label="Добавть в корзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
+           
             </button>
           </div>
         </article>
       </li>
-      <li class="product-grid__item mix vagetables">
+      <li class="products-grid__item mix vagetables">
         <article class="product-card">
           <div class="product-card__top">
             <div class="product-card__badges">
@@ -457,17 +472,15 @@
             <h3 class="product-card__name"><a href="#">Перец оранжевый, 1кг</a></h3>
             <div class="product-card__prices">
               <span class="product-card__price product-card__price--old">1999 ₽ </span>
-              <span class="product-card__price product-card__price--new">999 ₽ </span>
+              <span class="product-card__price product-card__price--new">499 ₽ </span>
             </div>
             <button class="product-card__cart" type="button" aria-label="Добавть в корзина">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
+               
             </button>
           </div>
         </article>
       </li>
-      <li class="product-grid__item mix vagetables">
+      <li class="products-grid__item mix vagetables">
         <article class="product-card">
           <div class="product-card__top">
             <div class="product-card__badges">
@@ -489,9 +502,7 @@
               <span class="product-card__price product-card__price--new">999 ₽ </span>
             </div>
             <button class="product-card__cart" type="button" aria-label="Добавть в корзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
+         
             </button>
           </div>
         </article>
@@ -520,9 +531,7 @@
               <span class="product-card__price product-card__price--new">999 ₽ </span>
             </div>
             <button class="product-card__cart" type="button" aria-label="Добавть в корзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
+
             </button>
           </div>
         </article>
@@ -549,9 +558,7 @@
               <span class="product-card__price product-card__price--new">999 ₽ </span>
             </div>
             <button class="product-card__cart" type="button" aria-label="Добавть в корзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
+     
             </button>
           </div>
         </article>
@@ -575,9 +582,7 @@
               <span class="product-card__price product-card__price--new">999 ₽ </span>
             </div>
             <button class="product-card__cart" type="button" aria-label="Добавть в корзину">
-              <svg>
-                <use xlink:href="images/sprite.svg#cart-link"></use>
-              </svg>
+     
             </button>
           </div>
         </article>
@@ -628,7 +633,7 @@
         </li>
       </ul>
 
-      <ul class="products-grid__catalog product-cards" id="stock-catalog">
+      <ul class="products-grid__catalog" id="stock-catalog">
         <li class="products-grid__item mix new">
           <article class="product-card product-card--stock">
             <div class="product-card__top">
@@ -833,6 +838,9 @@
         <li class="swiper-slide">
           <a class="brands__brand brands__brand--fanta" href="#"></a>
         </li>
+        <li class="swiper-slide">
+          <a class="brands__brand brands__brand--md" href="#"></a>
+        </li>
       </ul>
     </div>
   </div>
@@ -983,6 +991,8 @@
   <script src="js/mixitup.min.js"></script>
 
   <!-- ===== JS ===== -->
+  <script src="js/cart.js"></script>
+  
   <script src="js/main.min.js"></script>
 </body>
 

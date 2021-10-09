@@ -5,7 +5,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  position: relative;
+  
   transition: 200ms ease-in;
 
   &.no-scroll {
@@ -33,7 +33,7 @@ body {
 //   }
 // }
 
-// Для прибития футера к низу
+// ! Для прибития футера к низу
 
 html,
 body {
@@ -217,3 +217,33 @@ body {
     font-size: 20px;
   }
 }
+
+// .toast {
+//   width: 125px;
+//   padding: 12px;
+//   font-size: 20px;
+//   background-color: var(--color-green-900);
+//   color: var(--color-white);
+//   border-radius: var(--border-radius);
+
+//   position: absolute;
+//   // right: 0;
+//   // bottom: 0;
+
+//   // opacity: 0;
+//   // visibility: hidden;
+//   transform: translateY(100px);
+
+//   z-index: 100;
+//   transition: 250ms ease-in;
+
+//   // top: 0;
+// bottom: 0;
+//   width: 100%;
+
+//   // &.active {
+//   //   opacity: 1;
+//   //   visibility: visible;
+//   //   transform: translateY(0);
+//   // }
+// }

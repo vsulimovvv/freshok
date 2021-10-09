@@ -36,15 +36,18 @@ toggleSearch();
 const togglePopup = () => {
   const popupParent = document.querySelector('.header');
   const popupContent = document.querySelector('.cart');
+  const body = document.querySelector('body');
 
   if (popupParent && popupContent) {
     popupParent.addEventListener('click', e => {
       let target = e.target;
 
       if (target.closest('.cart-btn')) {
-        popupContent.classList.add('active')
+        popupContent.classList.add('active');
+        body.classList.add('no-scroll');
       } else if (target.closest('.cart__close') || target === popupContent) {
-        popupContent.classList.remove('active')
+        popupContent.classList.remove('active');
+        body.classList.remove('no-scroll');
       }
     })
   }
@@ -102,10 +105,9 @@ const sliderBrands = (sliderSelector) => {
 
   if (slider) {
     const swiper = new Swiper(slider, {
-      loop: true,
+
       slidesPerView: 6,
       slidesPerGroup: 6,
-
       loopFillGroupWithBlank: true,
       breakpoints: {
         320: {
@@ -123,7 +125,7 @@ const sliderBrands = (sliderSelector) => {
         768: {
           slidesPerView: 5,
           slidesPerGroup: 5,
-          spaceBetween: 93,
+          spaceBetween: 90,
         },
         991: {
           slidesPerView: 6,
@@ -155,6 +157,7 @@ const mix = (mixContainer1, mixContainer2) => {
   }
 }
 mix('[data-ref="container-1"]', '[data-ref="container-2"]');
+
 
 
 // const togglePopup = (popupBtnEl, popupParentEl, popupContentEl, popupCloseBtn, activeClass) => {
@@ -192,8 +195,6 @@ mix('[data-ref="container-1"]', '[data-ref="container-2"]');
 // }
 
 // * Filters
-
-
 // // * Потом сделаю универсальную
 // const togglePopup = () => {
 //   const popupParent = document.querySelector('.header');

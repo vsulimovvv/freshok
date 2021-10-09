@@ -45,4 +45,10 @@
     line-height: 1;
     color: var(--color-green-900);
   }
+
+  &__item {
+    width: 100%;
+    max-height: 395px;
+    height: 100%;
+  }
 }

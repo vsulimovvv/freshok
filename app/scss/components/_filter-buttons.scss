@@ -1,0 +1,99 @@
+.filter-actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--gap-48);
+  max-width: 387px;
+  justify-content: space-between;
+  margin-left: auto;
+
+  @include breakpointsMaxW($bp-768) {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  &__select {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 6px;
+      height: 11px;
+      background-image: url('../images/icons/chevron.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      right: 15px;
+    }
+
+    .select {
+      background-color: none;
+      border: none;
+      appearance: none;
+      font-family: inherit;
+      font-size: 1rem;
+      border: var(--border-product);
+      padding: 15px 42px 15px 11px;
+      border-radius: var(--border-radius-small);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: #505050;
+    background-color: #f6f6f6;
+    height: 47px;
+    width: 47px;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: center;
+
+    &:first-child {
+      display: none;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      &:not(:first-child) {
+        display: none;
+      }
+
+      &:first-child {
+        display: block;
+        margin-right: 10px;
+      }
+    }
+
+    &--grid {
+      background-image: url('../images/icons/grid-icon.svg');
+
+      &.active {
+        background-image: url('../images/icons/grid-active-icon.svg');
+      }
+    }
+
+    &--list {
+      background-image: url('../images/icons/list-icon.svg');
+
+      &.active {
+        background-image: url('../images/icons/list-active-icon.svg');
+      }
+    }
+
+    &--filter {
+      background-image: url('../images/icons/filter-icon.svg');
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.breadcrumbs {
+  background-color: var(--color-silver-100);
+  padding: 24px 0;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 4px;
+
+      background-image: url('../images/icons/chevron-gray.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

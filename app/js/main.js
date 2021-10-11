@@ -161,51 +161,103 @@ function mix(mixContainer1, mixContainer2) {
 }
 mix('[data-ref="container-1"]', '[data-ref="container-2"]');
 
-// // * Price Box (Castom Range Box)
-// const customRangeBox = () => {
-//   const rangeOne = document.querySelector('#range-1');
-//   const rangeTwo = document.querySelector('#range-2');
-//   const sliderTrack = document.querySelector('.sidebar-box__track');
-//   const sliderMaxValue = document.querySelector('#range-1').max;
+// * Price Box (Castom Range Box)
+const customRangeBox = () => {
+  const rangeOne = document.querySelector('#range-1');
+  const rangeTwo = document.querySelector('#range-2');
+  const sliderTrack = document.querySelector('.sidebar-box__track');
+  const sliderMaxValue = document.querySelector('#range-1').max;
 
-//   let displayValueOne = document.querySelector('#value-1');
-//   let displayValueTwo = document.querySelector('#value-2');
-//   let minStep = 0;
+  let displayValueOne = document.querySelector('#value-1');
+  let displayValueTwo = document.querySelector('#value-2');
+  let minStep = 0;
 
-//   fillColor();
+  fillColor();
 
-//   function slideRangeOne() {
-//     if (parseInt(rangeTwo.value) - parseInt(rangeOne.value) >= minStep) {
-//       rangeOne.value = parseInt(rangeTwo.value) - minStep
-//     }
+  function slideRangeOne() {
+    if (parseInt(rangeTwo.value) - parseInt(rangeOne.value) >= minStep) {
+      rangeOne.value = parseInt(rangeTwo.value) - minStep
+    }
 
-//     displayValueOne.textContent = rangeOne.value;
-//     fillColor();
-//   }
+    displayValueOne.textContent = rangeOne.value;
+    fillColor();
+  }
 
-//   function slideRangeTwo() {
-//     if (parseInt(rangeOne.value) - parseInt(rangeTwo.value) >= minStep) {
-//       rangeTwo.value = parseInt(rangeOne.value) - minStep;
-//     }
+  function slideRangeTwo() {
+    if (parseInt(rangeOne.value) - parseInt(rangeTwo.value) >= minStep) {
+      rangeTwo.value = parseInt(rangeOne.value) - minStep;
+    }
 
-//     displayValueTwo.textContent = rangeTwo.value;
-//     fillColor();
-//   }
+    displayValueTwo.textContent = rangeTwo.value;
+    fillColor();
+  }
 
-//   function fillColor() {
-//     parcent1 = (rangeOne.value / sliderMaxValue) * 100;
-//     parcent2 = (rangeTwo.value / sliderMaxValue) * 100;
+  function fillColor() {
+    parcent1 = (rangeOne.value / sliderMaxValue) * 100;
+    parcent2 = (rangeTwo.value / sliderMaxValue) * 100;
 
-//     sliderTrack.style.background = `linear-gradient(to right, #c4c4c4 ${parcent1}%, #63A60F ${parcent1}%, #63A60F ${parcent2}%, #c4c4c4 ${parcent2}%)`;
-//   }
+    sliderTrack.style.background = `linear-gradient(to right, #c4c4c4 ${parcent1}%, #63A60F ${parcent1}%, #63A60F ${parcent2}%, #c4c4c4 ${parcent2}%)`;
+  }
 
-//   rangeOne.addEventListener('input', e => {
-//     slideRangeOne();
-//   });
-//   rangeTwo.addEventListener('input', e => {
-//     slideRangeTwo();
-//   });
-// }
-// customRangeBox();
+  rangeOne.addEventListener('input', e => {
+    slideRangeOne();
+  });
+  rangeTwo.addEventListener('input', e => {
+    slideRangeTwo();
+  });
+}
+customRangeBox();
 
 // * Show More
+
+const dropSidebox = () => {
+  const boxesTop = document.querySelectorAll('.sidebar-box__top');
+
+  boxesTop.forEach(top => {
+    top.addEventListener('click', e => {
+      console.log(top.parentNode)
+      top.parentNode.classList.toggle('active');
+    });
+  });
+};
+
+dropSidebox();
+
+const showFilters = () => {
+  const btn = document.querySelector('.filter-actions__button--filter');
+  const sidebar = document.querySelector('.sidebar');
+
+  btn.addEventListener('click', e => {
+    sidebar.classList.add('active')
+  });
+};
+showFilters();
+const toggleView = () => {
+  const items = document.querySelectorAll('.catalog__item');
+  const list = document.querySelector('.catalog__list');
+  const gridBtn = document.querySelector('.filter-actions__button--grid');
+  const listBtn = document.querySelector('.filter-actions__button--list');
+
+  gridBtn.addEventListener('click', e => {
+    listBtn.classList.remove('active');
+    gridBtn.classList.add('active');
+
+    list.classList.remove('catalog__list--list');
+
+    items.forEach(item => {
+      item.classList.remove('product-card--stock');
+    });
+  });
+  
+  listBtn.addEventListener('click', e => {
+    listBtn.classList.add('active');
+    gridBtn.classList.remove('active');
+
+    list.classList.add('catalog__list--list');
+
+    items.forEach(item => {
+      item.classList.add('product-card--stock');
+    });
+  });
+};
+toggleView();

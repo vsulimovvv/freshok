@@ -1,0 +1,197 @@
+.sidebar-box {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  outline: 1px solid var(--color-silver-600);
+  height: 65px;
+  transition: 200ms ease;
+  width: 100%;
+
+  &.active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+
+    .sidebar-box__drop {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--categories {
+    max-height: 364px;
+
+    .sidebar-box__list {
+      height: 263px;
+    }
+  }
+
+  &--offers {
+    max-height: 198px;
+  }
+
+  &--price {
+    max-height: 183px;
+  }
+
+  &--brands {
+    max-height: 305px;
+  }
+
+  &__top {
+    padding: 18px;
+    border-bottom: 1px solid var(--color-silver-600);
+
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--color-dark-900);
+  }
+
+  &__drop {
+    padding: 18px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms ease-in;
+
+    overflow: auto;
+    max-height: 65%;
+
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #C4C4C4;
+      border-radius: 3px;
+    }
+  }
+
+  &__list {
+    // overflow: auto;
+    // max-height: 65%;
+
+    // scrollbar-width: thin;
+
+    // &::-webkit-scrollbar {
+    //   width: 4px;
+    // }
+
+    // &::-webkit-scrollbar-track {
+    //   background-color: transparent;
+    // }
+
+    // &::-webkit-scrollbar-thumb {
+    //   background-color: #C4C4C4;
+    //   border-radius: 3px;
+    // }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: var(--color-dark-500);
+
+  }
+
+  &__link {}
+
+  &__ranges {
+    position: relative;
+    padding: 22px 18px 18px 18px;
+    height: 82px;
+  }
+
+  &__tracks {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__track {
+    position: absolute;
+    width: calc(100% - 36px);
+    height: 2px;
+    background-color: #C4C4C4;
+    bottom: 1px;
+  }
+
+  &__range {
+    position: absolute;
+
+    appearance: none;
+    outline: none;
+
+    width: calc(100% - 36px);
+    height: 2px;
+
+    background-color: transparent;
+    cursor: pointer;
+
+    bottom: 0;
+
+    &::-webkit-slider-runnable-track {
+      // дорожка, бегунок
+      appearance: none;
+      height: 18px;
+    }
+
+    &::-webkit-slider-thumb {
+      // палек, сам эелемент
+      appearance: none;
+      height: 18px;
+      width: 18px;
+      background-color: var(--color-green-900);
+      border-radius: 50%;
+      pointer-events: auto;
+    }
+
+    &:active::-webkit-slider-thumb {
+      background-color: #fff;
+      border: 3px solid var(--color-green-900);
+    }
+  }
+
+  &__values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--color-silver-600);
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+
+    .value {
+      width: 80px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 6px;
+      color: var(--color-dark-500);
+      border: 1px solid var(--color-silver-600);
+      border-radius: var(--border-radius-small);
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.pagination {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-silver-100);
+    border-radius: var(--border-radius-small);
+
+    transition: border 150ms ease-in;
+
+    // * Курсор, либо все на линки делать
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    // !
+    &:last-child {
+      transform: rotate(180deg);
+    }
+
+    &--active,
+    &:hover {
+      border: 1px solid var(--color-dark-900);
+    }
+  }
+
+  &__link {
+    color: var(--color-dark-500);
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+
+  &__button {
+    svg {
+      width: 11px;
+      height: 18px;
+      fill: var(--color-dark-500)
+    }
+
+    // &:last-child{
+    //   svg{
+    //     transform: rotate(90deg);
+    //   }
+    // }
+  }
+}

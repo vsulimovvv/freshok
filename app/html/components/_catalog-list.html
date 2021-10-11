@@ -1,0 +1,232 @@
+<section class="catalog">
+  <div class="container">
+    <h2 class="catalog__title section-title">Каталог товаров</h2>
+    <div class="catalog__wrapper">
+      <aside class="catalog__sidebar sidebar">
+        <div class="sidebar__box sidebar-box sidebar-box--categories">
+          <div class="sidebar-box__top">
+            <h3 class="sidebar-box__title">Категории</h3>
+          </div>
+          <ul class="sidebar-box__list">
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="sidebar-box__item">
+              <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar__box sidebar-box sidebar-box--offers">
+          <div class="sidebar-box__top">
+            <h3 class="sidebar-box__title">Предложения</h3>
+          </div>
+          <ul class="sidebar-box__list">
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                Со скидкой
+              </label>
+            </li>
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox" checked>
+                <span class="check__box"></span>
+                Новинка
+              </label>
+            </li>
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                Хит
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar__box sidebar-box sidebar-box--brands">
+          <div class="sidebar-box__top">
+            <h3 class="sidebar-box__title">Бренд</h3>
+          </div>
+          <ul class="sidebar-box__list">
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                CocaCola
+              </label>
+            </li>
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                Pepsi
+              </label>
+            </li>
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                Sprite
+              </label>
+            </li>
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                Fanta
+              </label>
+            </li>
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                RedBull
+              </label>
+            </li>
+            <li class="sidebar-box__item">
+              <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                Dr Pepper
+              </label>
+            </li>
+
+          </ul>
+        </div>
+        <div class="sidebar__box sidebar-box sidebar-box--price">
+          <div class="sidebar-box__top">
+            <h3 class="sidebar-box__title">Цена</h3>
+          </div>
+          <div class="sidebar-box__ranges">
+            <div class="sidebar-box__values">
+              <div class="sidebar-box__value">
+                от
+                <span class="value" id="value-1">0</span>
+                ₽
+              </div>
+              <div class="sidebar-box__value">
+                до
+                <span class="value" id="value-2">1000</span>
+
+              </div>
+            </div>
+            <div class="sidebar-box__tracks">
+              <div class="sidebar-box__track"></div>
+              <input class="sidebar-box__range" type="range" min="0" max="1100" value="100" id="range-1">
+              <input class="sidebar-box__range" type="range" min="0" max="1100" value="1000" id="range-2">
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="catalog__content ">
+        <div class="catalog__actions filter-actions">
+          <div class="filter-actions__select">
+            <select class="select" name="select-1" id="select-1">
+              <option value="1">По названию</option>
+            </select>
+          </div>
+          <div class="filter-actions__select">
+            <select class="select" name="select-1" id="select-1">
+              <option value="1">по 12</option>
+            </select>
+          </div>
+
+          <button class="filter-actions__button filter-actions__button--grid"></button>
+          <button class="filter-actions__button filter-actions__button--list active">
+          </button>
+
+        </div>
+
+        <ul class="catalog__list catalog__list--list">
+
+
+          <li class="catalog__item">
+            <article class="product-row">
+              <div class="product-row__img" style="background-image: url('images/products/product-1.png');">
+              </div>
+              <div class="product-row__body">
+                <span>В НАЛИЧИИ</span>
+                <h3>Ананас, 1кг</h3>
+                <div class="price">
+                  <span>1999 ₽</span>
+                  <span>999 ₽</span>
+                </div>
+              </div>
+              <div class="product-row__actions">
+                <div class="rating">
+                  4.5 
+                  <svg>
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <button>
+                  <svg><use xlink:href="images/sprite.svg#favorite-link"></use></svg>
+                </button>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+
+        <div class="catalog__bottom">
+          <button class="catalog__button button button--green">Показать еще</button>
+          <div class="catalog__pagination pagination">
+
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <button class="pagination__button">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
+              </li>
+
+              <li class="pagination__item pagination__item--active">
+                <a class="pagination__link" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">...</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">9</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">10</a>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__button">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

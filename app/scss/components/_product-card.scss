@@ -189,7 +189,39 @@
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
+
+  &__rating {
+    position: absolute;
+    top: 0;
+    right: 16px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    padding-right: 18px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icons/star.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -2px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-yellow-900);
+    }
+  }
 }
+
 
 .product-card--stock {
   display: flex;

@@ -1,14 +1,7 @@
 .hero {
   min-height: 600px;
-  z-index: 1;
-
-  .swiper-slide {
-    z-index: 9;
-  }
 
   &__slide {
-    z-index: 5;
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -80,7 +73,7 @@
   &__dots {
     display: none;
 
-    @include breakpointsMaxW($bp-991) {
+    @include breakpointsMaxW($bp-768) {
       display: block;
 
       .swiper-pagination-bullet {
@@ -145,7 +138,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    @include breakpointsMaxW($bp-991) {
+    @include breakpointsMaxW($bp-768) {
       display: none;
     }
   }

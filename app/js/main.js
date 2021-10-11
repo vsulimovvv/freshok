@@ -1,3 +1,29 @@
+const hoverMenuDropdown = () => {
+  // const parentEl = document.querySelector('.dropdown');
+  const lineEl = document.querySelector('.dropdown__divider');
+  const itemEl = document.querySelectorAll('.dropdown__item');
+
+  lineEl.style.height = `${itemEl[0].offsetHeight}px`;
+  itemEl.forEach((el) => {
+    el.addEventListener('mouseenter', (e) => {
+
+      let target = e.currentTarget;
+      lineEl.classList.add('active');
+      lineEl.style.height = `${target.offsetHeight}px`;
+      lineEl.style.top = `${target.offsetTop}px`;
+    });
+  });
+  itemEl.forEach((el) => {
+    el.addEventListener('mouseleave', (e) => {
+      lineEl.classList.remove('active');
+      lineEl.style.height = `${itemEl[0].offsetHeight}px`;
+      lineEl.style.top = `0px`;
+    });
+  });
+}
+
+hoverMenuDropdown();
+
 const toggleDropdown = () => {
   const popupParent = document.querySelector('.dropdown');
   if (popupParent) {
@@ -25,61 +51,39 @@ const toggleSearch = () => {
 };
 toggleSearch();
 
-const togglePopup = () => {
-  const popupParent = document.querySelector('.header');
-  const popupContent = document.querySelector('.cart');
-  const body = document.querySelector('body');
-  const overlay = document.querySelector('.overlay');
+const modals = () => {
+  function bindModal(openBtn, modal, close, overlay) {
+    const openBtnEl = document.querySelector(openBtn);
+    const modalEl = document.querySelector(modal);
+    const closeEl = document.querySelector(close);
+    const overlayEl = document.querySelector(overlay);
 
-  if (popupParent && popupContent) {
-    popupParent.addEventListener('click', e => {
+    openBtnEl.addEventListener('click', e => {
+      if (e.target) {
+        e.preventDefault()
+      }
 
-      let target = e.target;
-      if (target.closest('.cart-btn')) {
-        popupContent.classList.add('active');
-        body.classList.add('no-scroll');
-        overlay.classList.add('active');
-      } else if (target.closest('.cart__close') || target === popupContent) {
-        popupContent.classList.remove('active');
-        body.classList.remove('no-scroll');
-        overlay.classList.remove('active');
+      modalEl.classList.add('active');
+      overlayEl.classList.add('active');
+    });
+
+    closeEl.addEventListener('click', e => {
+      modalEl.classList.remove('active');
+      overlayEl.classList.remove('active');
+    });
+
+    modalEl.addEventListener('click', e => {
+      if (e.target === modalEl) {
+        modalEl.classList.remove('active');
+        overlayEl.classList.remove('active');
       }
     })
   }
-};
-togglePopup();
 
-const togglePopup2 = () => {
-  const openBtn = document.querySelector('.header__toggle');
-  const closeBtn = document.querySelector('.mobile-menu__close');
-  const menuContent = document.querySelector('.mobile-menu');
-  const body = document.querySelector('body');
-  const overlay = document.querySelector('.overlay');
-
-  if (openBtn && menuContent) {
-    openBtn.addEventListener('click', e => {
-      menuContent.classList.add('active');
-      body.classList.add('no-scroll');
-      overlay.classList.add('active');
-      // hero.classList.add('overlay');
-    });
-    closeBtn.addEventListener('click', e => {
-      menuContent.classList.remove('active');
-      body.classList.remove('no-scroll');
-      overlay.classList.remove('active');
-      // hero.classList.remove('overlay');
-    });
-    menuContent.addEventListener('click', e => {
-      console.log(e.target)
-      if (e.target === menuContent) {
-        menuContent.classList.remove('active');
-        body.classList.remove('no-scroll');
-        overlay.classList.remove('active');
-      }
-    });
-  }
+  bindModal('.user-menu__item--cart', '.cart', '.cart__close', '.overlay');
+  bindModal('.header__toggle', '.mobile-menu', '.mobile-menu__close', '.overlay');
 };
-togglePopup2();
+modals();
 
 const sliderWithSlideOnePerView = (sliderSelector) => {
   const slider = document.querySelector(sliderSelector);
@@ -206,7 +210,3 @@ mix('[data-ref="container-1"]', '[data-ref="container-2"]');
 // customRangeBox();
 
 // * Show More
-
-
-
-

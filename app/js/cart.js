@@ -83,7 +83,6 @@ productBtn.forEach(btn => {
   btn.addEventListener('click', e => {
     let target = e.target;
 
-
     changeBtnIcon(target);
 
     let targetParent = target.closest('.product-card')

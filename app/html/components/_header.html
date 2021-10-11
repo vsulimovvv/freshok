@@ -97,9 +97,20 @@
 
         <form class="header__search form-search" action="#">
           <div class="form-search__group">
-            <label for="search"></label>
-            <input class="form-search__input" id="search" type="search" name="search"
-              placeholder="Найти в магазине ...">
+            <label for="search" class="form-search__label">
+              <input class="form-search__input" id="search" type="search" name="search"
+                placeholder="Найти в магазине ...">
+            </label>
+            <button class="form-search__button button button--black" type="submit">Поиск</button>
+          </div>
+        </form>
+
+        <form class="header__search form-search form-search--mobile" action="#">
+          <div class="form-search__group">
+            <label for="search" class="form-search__label">
+              <input class="form-search__input" id="search" type="search" name="search"
+                placeholder="Я ищу...">
+            </label>
             <button class="form-search__button button button--black" type="submit">Поиск</button>
           </div>
         </form>

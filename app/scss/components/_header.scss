@@ -4,9 +4,9 @@
   letter-spacing: 0.03em;
 
   &__top {
+    font-family: $OpenSansSemibold;
     background-color: var(--color-dark-800);
     color: var(--color-white);
-    font-weight: 700;
     font-size: 13px;
     text-transform: uppercase;
     padding-top: 14px;
@@ -27,10 +27,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    @include breakpointsMaxW($bp-991) {
-      // display: none;
-    }
   }
 
   &__menu {
@@ -39,7 +35,6 @@
 
   &__logo {
     margin-right: 24px;
-    z-index: 10;
 
     &--mobile {
       display: none;
@@ -51,7 +46,6 @@
       &--mobile {
         display: block;
         width: 40px;
-        z-index: 99;
 
         display: flex;
         justify-content: center;
@@ -106,6 +100,7 @@
     margin-right: var(--gap-30);
     max-width: 240px;
     width: 100%;
+
     @include breakpointsMaxW($bp-991) {
       display: none;
     }
@@ -116,26 +111,12 @@
     margin-right: 46px;
     height: 50px;
 
+    @include breakpointsMaxW($bp-1290) {
+      margin-right: 30px;
+    }
+
     @include breakpointsMaxW($bp-768) {
-      position: absolute;
-
-      z-index: 100;
-      width: 100%;
-      max-width: 100%;
-      left: 0;
-
-      // display: none;
-      visibility: hidden;
-      opacity: 0;
-      bottom: -30px;
-      transition: 200ms ease;
-
-      &.active {
-        // display: block;
-        visibility: visible;
-        opacity: 1;
-        bottom: -50px;
-      }
+      display: none;
     }
   }
 

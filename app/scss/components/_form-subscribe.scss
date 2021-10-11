@@ -1,12 +1,15 @@
 .form-subscribe {
   max-width: 305px;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__group {
-    width: 100%;
-    height: 100%;
-    display: flex;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   &__input {
@@ -14,7 +17,7 @@
     width: 100%;
     background-color: var(--color-white);
     border-radius: 6px 0px 0px 6px;
-    padding: 12px;
+    padding: 10px;
 
     &:focus {
       outline: 1px solid var(--color-green-900);
@@ -28,13 +31,20 @@
     }
   }
 
+  &__label {
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
   &__button {
     position: absolute;
+    bottom: 0;
     right: 0;
-    top: 0;
     max-width: 125px;
     width: 100%;
-    height: 100%;
+    height: 40px;
     border-radius: 0px 6px 6px 0px;
 
     font-size: 12px;

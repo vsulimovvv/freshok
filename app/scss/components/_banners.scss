@@ -17,7 +17,6 @@
 
     @include breakpointsMaxW($bp-768) {
       grid-template-columns: 1fr;
-      // grid-template-rows: repeat(3, 1fr);
     }
   }
 
@@ -53,6 +52,7 @@
       opacity: 0;
       visibility: hidden;
       transition: 250ms ease-in;
+      backdrop-filter: blur(5px);
     }
 
     &--big {
@@ -68,6 +68,7 @@
     }
 
     &:hover {
+
       &>* {
         color: var(--color-white);
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);

@@ -14,21 +14,13 @@ const toggleDropdown = () => {
 toggleDropdown();
 
 const toggleSearch = () => {
-  const popupParent = document.querySelector('.header__search');
+  const popupParent = document.querySelector('.form-search--mobile');
   const popupBtn = document.querySelector('.user-menu__item--search');
   if (popupParent) {
 
     popupBtn.addEventListener('click', e => {
       popupParent.classList.toggle('active')
     })
-
-    // popupParent.addEventListener('click', function (e) {
-    //   let target = e.target;
-
-    //   if (target.matches('.user-menu__item--search')) {
-    //     this.classList.toggle('active');
-    //   }
-    // })
   }
 };
 toggleSearch();
@@ -37,17 +29,20 @@ const togglePopup = () => {
   const popupParent = document.querySelector('.header');
   const popupContent = document.querySelector('.cart');
   const body = document.querySelector('body');
+  const overlay = document.querySelector('.overlay');
 
   if (popupParent && popupContent) {
     popupParent.addEventListener('click', e => {
-      let target = e.target;
 
+      let target = e.target;
       if (target.closest('.cart-btn')) {
         popupContent.classList.add('active');
         body.classList.add('no-scroll');
+        overlay.classList.add('active');
       } else if (target.closest('.cart__close') || target === popupContent) {
         popupContent.classList.remove('active');
         body.classList.remove('no-scroll');
+        overlay.classList.remove('active');
       }
     })
   }
@@ -59,23 +54,28 @@ const togglePopup2 = () => {
   const closeBtn = document.querySelector('.mobile-menu__close');
   const menuContent = document.querySelector('.mobile-menu');
   const body = document.querySelector('body');
-  // const hero = document.querySelector('.hero');
+  const overlay = document.querySelector('.overlay');
 
   if (openBtn && menuContent) {
     openBtn.addEventListener('click', e => {
       menuContent.classList.add('active');
       body.classList.add('no-scroll');
+      overlay.classList.add('active');
       // hero.classList.add('overlay');
     });
     closeBtn.addEventListener('click', e => {
       menuContent.classList.remove('active');
       body.classList.remove('no-scroll');
+      overlay.classList.remove('active');
       // hero.classList.remove('overlay');
     });
     menuContent.addEventListener('click', e => {
-      menuContent.classList.remove('active');
-      body.classList.remove('no-scroll');
-      // hero.classList.remove('overlay');
+      console.log(e.target)
+      if (e.target === menuContent) {
+        menuContent.classList.remove('active');
+        body.classList.remove('no-scroll');
+        overlay.classList.remove('active');
+      }
     });
   }
 };

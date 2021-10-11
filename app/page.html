@@ -120,9 +120,20 @@
 
         <form class="header__search form-search" action="#">
           <div class="form-search__group">
-            <label for="search"></label>
-            <input class="form-search__input" id="search" type="search" name="search"
-              placeholder="Найти в магазине ...">
+            <label for="search" class="form-search__label">
+              <input class="form-search__input" id="search" type="search" name="search"
+                placeholder="Найти в магазине ...">
+            </label>
+            <button class="form-search__button button button--black" type="submit">Поиск</button>
+          </div>
+        </form>
+
+        <form class="header__search form-search form-search--mobile" action="#">
+          <div class="form-search__group">
+            <label for="search" class="form-search__label">
+              <input class="form-search__input" id="search" type="search" name="search"
+                placeholder="Я ищу...">
+            </label>
             <button class="form-search__button button button--black" type="submit">Поиск</button>
           </div>
         </form>
@@ -208,10 +219,12 @@
     <div class="container">
       <div class="footer__body-wrapper">
         <div class="footer__subscribe">
-          <h2 class="footer__title">Следите за нашими акциями</h2>
           <form class="footer__form form-subscribe" action="#">
-            <div class="form-subscribe__group">
-              <input class="form-subscribe__input" type="text" placeholder="email@email.com">
+
+            <div class="form-subscribe__group"><label class="form-subscribe__label" for="email">Следите
+                за нашими акциями</label>
+              <input class="form-subscribe__input" id="email" type="email" name="email" placeholder="email@email.com"
+                required>
               <button class="form-subscribe__button button button--green" type="submit">Подписаться</button>
             </div>
           </form>

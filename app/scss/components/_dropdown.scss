@@ -1,6 +1,6 @@
 .dropdown {
   position: relative;
-  z-index: 100;
+  z-index: var(--z-1);
   max-width: 240px;
 
   &__button {
@@ -16,6 +16,7 @@
     padding-left: 40px;
     position: relative;
     transition: 150ms ease-in;
+    z-index: var(--z-1);
 
     &::after,
     &::before {
@@ -80,7 +81,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9;
+    z-index: var(--z-10);
     background-color: #fff;
     display: flex;
     flex-direction: column;

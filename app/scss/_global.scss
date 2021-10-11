@@ -1,11 +1,10 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $OpenSansRegular;
   background-color: var(--color-white);
   color: var(--color-dark-500);
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.2;
-  
+
   transition: 200ms ease-in;
 
   &.no-scroll {
@@ -16,22 +15,6 @@ body {
     transform: scale(1.05, 1.025);
   }
 }
-
-// header {
-//   transition: 200ms ease-in-out;
-
-//   &.overlay {
-//     transform: translateX(10px) scale(0.9);
-//   }
-// }
-
-// .hero {
-//   transition: 200ms ease-in-out;
-
-//   &.overlay {
-//     transform: translateX(10px) scale(0.9);
-//   }
-// }
 
 // ! Для прибития футера к низу
 
@@ -66,13 +49,11 @@ body {
 }
 
 .section-title {
-  font-family: 'Ruda', sans-serif;
+  font-family: $RudaSemibold;
   text-align: center;
-  font-weight: 600;
   font-size: 32px;
   line-height: 1.4;
   margin-bottom: 30px;
-  z-index: 1;
   color: var(--color-dark-900);
   position: relative;
   text-transform: uppercase;
@@ -86,7 +67,6 @@ body {
 .logo {
   width: 200px;
   height: 60px;
-  z-index: 100;
   flex-shrink: 0;
 
   svg {
@@ -198,9 +178,8 @@ body {
 }
 
 .main-title {
-  font-family: 'Ruda', sans-serif;
+  font-family: $RudaBlack;
   text-transform: uppercase;
-  font-weight: 900;
   font-size: 60px;
   line-height: 1.3;
   color: var(--color-dark-500);
@@ -218,32 +197,43 @@ body {
   }
 }
 
-// .toast {
-//   width: 125px;
-//   padding: 12px;
-//   font-size: 20px;
-//   background-color: var(--color-green-900);
-//   color: var(--color-white);
-//   border-radius: var(--border-radius);
+// Удалить крестик у инпута серч
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
 
-//   position: absolute;
-//   // right: 0;
-//   // bottom: 0;
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
 
-//   // opacity: 0;
-//   // visibility: hidden;
-//   transform: translateY(100px);
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
 
-//   z-index: 100;
-//   transition: 250ms ease-in;
+// 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(5px);
+  z-index: var(--z-5);
+  transition: 200ms ease-in;
 
-//   // top: 0;
-// bottom: 0;
-//   width: 100%;
-
-//   // &.active {
-//   //   opacity: 1;
-//   //   visibility: visible;
-//   //   transform: translateY(0);
-//   // }
-// }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 550ms ease;
+  }
+}

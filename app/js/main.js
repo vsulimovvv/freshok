@@ -21,7 +21,6 @@ const hoverMenuDropdown = () => {
     });
   });
 }
-
 hoverMenuDropdown();
 
 const toggleDropdown = () => {
@@ -145,7 +144,7 @@ const sliderBrands = (sliderSelector) => {
 }
 sliderBrands('.brands__slider');
 
-const mix = (mixContainer1, mixContainer2) => {
+function mix(mixContainer1, mixContainer2) {
   const containerEl1 = document.querySelector(mixContainer1);
   const containerEl2 = document.querySelector(mixContainer2);
 

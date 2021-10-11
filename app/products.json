@@ -1,0 +1,29 @@
+[{
+    "id": "el1",
+    "name": "Соус Heinz Кисло-сладкий",
+    "img": "https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6023839822.jpg",
+    "priceNew": "169",
+    "priceOld": "273"
+  },
+  {
+    "id": "el2",
+    "name": "Хлебцы FITSTART ",
+    "img": "https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6052020314.jpg",
+    "priceNew": "163",
+    "priceOld": "173"
+  },
+  {
+    "id": "el3",
+    "name": "Сироп Spoom 'Мята'",
+    "img": "https://cdn1.ozone.ru/s3/multimedia-d/wc1200/6032258461.jpg",
+    "priceNew": "376",
+    "priceOld": "480"
+  },
+  {
+    "id": "el4",
+    "name": "Соус маринад к рыбе Сен Сой",
+    "img": "https://cdn1.ozone.ru/multimedia/wc1200/1027187434.jpg",
+    "priceNew": "125",
+    "priceOld": "500"
+  }
+]

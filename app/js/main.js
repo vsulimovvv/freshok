@@ -262,3 +262,107 @@ const rangeSliderForPrice = () => {
 };
 
 rangeSliderForPrice();
+
+// Tab
+function tabsProducts(
+  headerSelector,
+  tabSelector,
+  contentSelector,
+  activeClass
+) {
+  const header = document.querySelectorAll(headerSelector);
+  const tab = document.querySelectorAll(tabSelector);
+  const content = document.querySelectorAll(contentSelector);
+
+  hideTabContent();
+  showTabContent();
+
+  function hideTabContent() {
+    content.forEach((item) => {
+      item.classList.remove('active');
+    });
+    tab.forEach((item) => {
+      item.classList.remove(activeClass);
+    });
+  }
+
+  function showTabContent(i = 0) {
+    content[i].classList.add('active');
+    tab[i].classList.add(activeClass);
+  }
+
+  header.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      const target = e.target;
+      if (
+        target.classList.contains(tabSelector.replace(/\./, '')) ||
+        target.classList.parentNode.contains(tabSelector.replace(/\./, ''))
+      ) {
+        tab.forEach((item, i) => {
+          if (target == item || target.parentNode == item) {
+            hideTabContent();
+            showTabContent(i);
+          }
+        });
+      }
+    });
+  });
+}
+tabsProducts(
+  '.tab__list',
+  '.tab__button',
+  '.tab__body-list',
+  'tab__button--active'
+);
+
+// ! Sldier
+// const sliderRec = document.querySelector('.recommendations__slider');
+// if (sliderRec) {
+//   const swiper = new Swiper(sliderRec, {
+//     slidesPerView: 1,
+//     loop: true,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//   });
+// }
+
+const sliderGroup = () => {
+  const sliderRec = document.querySelector('.recommendations__slider');
+  const nextBtn = document.querySelector('.arrow-next');
+  const prevBtn = document.querySelector('.arrow-prev');
+
+  if (sliderRec) {
+    const swiper = new Swiper(sliderRec, {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 5,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        800: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 28,
+        },
+      },
+    });
+  }
+};
+sliderGroup();

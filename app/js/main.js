@@ -161,55 +161,6 @@ function mix(mixContainer1, mixContainer2) {
 }
 mix('[data-ref="container-1"]', '[data-ref="container-2"]');
 
-// * Price Box (Castom Range Box)
-const customRangeBox = () => {
-  const rangeOne = document.querySelector('#range-1');
-  const rangeTwo = document.querySelector('#range-2');
-  const sliderTrack = document.querySelector('.sidebar-box__track');
-  const sliderMaxValue = document.querySelector('#range-1').max;
-
-  let displayValueOne = document.querySelector('#value-1');
-  let displayValueTwo = document.querySelector('#value-2');
-  let minStep = 0;
-
-  fillColor();
-
-  function slideRangeOne() {
-    if (parseInt(rangeTwo.value) - parseInt(rangeOne.value) >= minStep) {
-      rangeOne.value = parseInt(rangeTwo.value) - minStep
-    }
-
-    displayValueOne.textContent = rangeOne.value;
-    fillColor();
-  }
-
-  function slideRangeTwo() {
-    if (parseInt(rangeOne.value) - parseInt(rangeTwo.value) >= minStep) {
-      rangeTwo.value = parseInt(rangeOne.value) - minStep;
-    }
-
-    displayValueTwo.textContent = rangeTwo.value;
-    fillColor();
-  }
-
-  function fillColor() {
-    parcent1 = (rangeOne.value / sliderMaxValue) * 100;
-    parcent2 = (rangeTwo.value / sliderMaxValue) * 100;
-
-    sliderTrack.style.background = `linear-gradient(to right, #c4c4c4 ${parcent1}%, #63A60F ${parcent1}%, #63A60F ${parcent2}%, #c4c4c4 ${parcent2}%)`;
-  }
-
-  rangeOne.addEventListener('input', e => {
-    slideRangeOne();
-  });
-  rangeTwo.addEventListener('input', e => {
-    slideRangeTwo();
-  });
-}
-customRangeBox();
-
-// * Show More
-
 const dropSidebox = () => {
   const boxesTop = document.querySelectorAll('.sidebar-box__top');
 
@@ -227,37 +178,87 @@ const showFilters = () => {
   const btn = document.querySelector('.filter-actions__button--filter');
   const sidebar = document.querySelector('.sidebar');
 
-  btn.addEventListener('click', e => {
-    sidebar.classList.add('active')
-  });
+  if (btn && sidebar) {
+    btn.addEventListener('click', e => {
+      sidebar.classList.add('active')
+    });
+  }
 };
 showFilters();
+
 const toggleView = () => {
-  const items = document.querySelectorAll('.catalog__item');
+  const items = document.querySelectorAll('.catalog__item article');
   const list = document.querySelector('.catalog__list');
   const gridBtn = document.querySelector('.filter-actions__button--grid');
   const listBtn = document.querySelector('.filter-actions__button--list');
 
-  gridBtn.addEventListener('click', e => {
-    listBtn.classList.remove('active');
-    gridBtn.classList.add('active');
+  if (gridBtn && listBtn) {
+    gridBtn.addEventListener('click', e => {
+      listBtn.classList.remove('active');
+      gridBtn.classList.add('active');
 
-    list.classList.remove('catalog__list--list');
+      list.classList.remove('catalog__list--list');
 
-    items.forEach(item => {
-      item.classList.remove('product-card--stock');
+      items.forEach(item => {
+        item.className = 'product-card';
+      });
     });
-  });
-  
-  listBtn.addEventListener('click', e => {
-    listBtn.classList.add('active');
-    gridBtn.classList.remove('active');
 
-    list.classList.add('catalog__list--list');
+    listBtn.addEventListener('click', e => {
+      listBtn.classList.add('active');
+      gridBtn.classList.remove('active');
 
-    items.forEach(item => {
-      item.classList.add('product-card--stock');
+      list.classList.add('catalog__list--list');
+
+      items.forEach(item => {
+        item.className = 'product-card product-card--row';
+      });
     });
-  });
+  }
 };
 toggleView();
+
+const rangeSliderForPrice = () => {
+  const rangeSlider = document.querySelectorAll('.range-slider');
+
+  rangeSlider.forEach(item => {
+    if (item) {
+      noUiSlider.create(item, {
+        start: [100, 1000],
+        connect: true,
+        step: 1,
+        range: {
+          'min': [50],
+          'max': [1200]
+        }
+      });
+
+      const input0 = document.getElementById('input-0');
+      const input1 = document.getElementById('input-1');
+
+      const inputs = [input0, input1];
+
+      item.noUiSlider.on('update', function (values, handle) {
+        inputs[handle].value = Math.round(values[handle]);
+      });
+
+      const setRangeSlider = (i, value) => {
+        let arr = [null, null];
+        arr[i] = value;
+
+        item.noUiSlider.set(arr);
+      };
+
+      inputs.forEach((el, index) => {
+        el.addEventListener('change', e => {
+          setRangeSlider(index, e.currentTarget.value);
+        });
+        el.addEventListener('input', e => {
+          setRangeSlider(index, e.currentTarget.value);
+        });
+      });
+    };
+  });
+};
+
+rangeSliderForPrice();

@@ -135,25 +135,19 @@
             <h3 class="sidebar-box__title">Цена</h3>
           </div>
           <div class="sidebar-box__drop">
-            <div class="sidebar-box__ranges">
-              <div class="sidebar-box__values">
-                <div class="sidebar-box__value">
-                  от
-                  <span class="value" id="value-1">0</span>
-                  ₽
-                </div>
-                <div class="sidebar-box__value">
-                  до
-                  <span class="value" id="value-2">1000</span>
-
-                </div>
-              </div>
-              <div class="sidebar-box__tracks">
-                <div class="sidebar-box__track"></div>
-                <input class="sidebar-box__range" type="range" min="0" max="1100" value="100" id="range-1">
-                <input class="sidebar-box__range" type="range" min="0" max="1100" value="1000" id="range-2">
-              </div>
+            <div class="sidebar-box__inputs">
+              <label class="sidebar-box__label">
+                <span class="sidebar-box__text">от</span>
+                <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-0">
+                <span class="sidebar-box__text">₽</span>
+              </label>
+              <label class="sidebar-box__label">
+                <span class="sidebar-box__text">до</span>
+                <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-1">
+                <span class="sidebar-box__text">₽</span>
+              </label>
             </div>
+            <div class="sidebar-box__slider range-slider" id="range-slider"></div>
           </div>
         </div>
       </aside>
@@ -179,7 +173,7 @@
 
         </div>
 
-        <ul class="catalog__list">
+        <ul class="catalog__list catalog__list--grid">
           <li class="catalog__item">
             <article class="product-card">
               <div class="product-card__top">

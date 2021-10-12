@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ФрешОк</title>
+  <!-- <link rel="stylesheet" href="../node_modules/nouislider/dist/nouislider.min.css"> -->
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!--  -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!--  -->
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--  -->
   <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;600;700&display=swap" rel="stylesheet">
   <!--  -->
@@ -441,25 +442,19 @@
             <h3 class="sidebar-box__title">Цена</h3>
           </div>
           <div class="sidebar-box__drop">
-            <div class="sidebar-box__ranges">
-              <div class="sidebar-box__values">
-                <div class="sidebar-box__value">
-                  от
-                  <span class="value" id="value-1">0</span>
-                  ₽
-                </div>
-                <div class="sidebar-box__value">
-                  до
-                  <span class="value" id="value-2">1000</span>
-
-                </div>
-              </div>
-              <div class="sidebar-box__tracks">
-                <div class="sidebar-box__track"></div>
-                <input class="sidebar-box__range" type="range" min="0" max="1100" value="100" id="range-1">
-                <input class="sidebar-box__range" type="range" min="0" max="1100" value="1000" id="range-2">
-              </div>
+            <div class="sidebar-box__inputs">
+              <label class="sidebar-box__label">
+                <span class="sidebar-box__text">от</span>
+                <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-0">
+                <span class="sidebar-box__text">₽</span>
+              </label>
+              <label class="sidebar-box__label">
+                <span class="sidebar-box__text">до</span>
+                <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-1">
+                <span class="sidebar-box__text">₽</span>
+              </label>
             </div>
+            <div class="sidebar-box__slider range-slider" id="range-slider"></div>
           </div>
         </div>
       </aside>
@@ -485,7 +480,7 @@
 
         </div>
 
-        <ul class="catalog__list">
+        <ul class="catalog__list catalog__list--grid">
           <li class="catalog__item">
             <article class="product-card">
               <div class="product-card__top">
@@ -999,6 +994,13 @@
 
   <!-- ===== Mixitup ===== -->
   <script src="js/mixitup.min.js"></script>
+  <!-- <script src="../../node_modules/nouislider/dist/nouislider.min.js"></script> -->
+
+  <!--  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"
+    integrity="sha512-ZKqmaRVpwWCw7S7mEjC89jDdWRD/oMS0mlfH96mO0u3wrPYoN+lXmqvyptH4P9mY6zkoPTSy5U2SwKVXRY5tYQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!--  -->
   <script src="js/cart.js"></script>
   <!-- ===== JS ===== -->

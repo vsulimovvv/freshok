@@ -1,0 +1,77 @@
+.sidebar-box--price {
+  .sidebar-box__label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    letter-spacing: 0.03em;
+
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+
+  .sidebar-box__text {
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #C1C1C1;
+  }
+
+  .sidebar-box__inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+
+  .sidebar-box__input {
+    margin: 0 6px;
+    border-radius: var(--border-radius-small);
+    border: 1px solid #c1c1c1;
+    line-height: 1;
+    width: 80px;
+    height: 40px;
+    padding: 12px 20px;
+  }
+
+  .sidebar-box__slider {
+    width: 100%;
+    margin: 0 auto;
+    margin-right: 18px;
+  }
+
+  .noUi-target {
+    background-color: #c1c1c1;
+    border: none;
+    box-shadow: none;
+    height: 3px;
+  }
+
+  .noUi-connect {
+    background-color: var(--color-green-900);
+  }
+
+  .noUi-horizontal {
+    .noUi-handle {
+      box-shadow: none;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background-color: var(--color-green-900);
+      top: -8px;
+      cursor: pointer;
+
+      &:active,
+      &:hover {
+        border: 2px solid var(--color-green-900);
+        background-color: var(--color-white);
+      }
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+}

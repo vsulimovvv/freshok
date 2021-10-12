@@ -79,6 +79,7 @@ function styles() {
 
 function scripts() {
   return src([
+      // 'node_modules/nouislider/dist/nouislider.min.mjs',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

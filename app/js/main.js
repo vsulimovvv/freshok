@@ -72,7 +72,7 @@ const modals = () => {
         body.classList.remove('no-scroll');
       }
     })
-  }
+  };
 
   bindModal('.user-menu__item--cart', '.cart', '.cart__close', '.overlay');
   bindModal('.header__toggle', '.mobile-menu', '.mobile-menu__close', '.overlay');
@@ -183,7 +183,7 @@ const toggleView = () => {
       list.classList.remove('catalog__list--list');
 
       items.forEach(item => {
-        item.className = 'product-card';
+        item.className = 'product-card product-card--catalog';
       });
     });
 
@@ -256,40 +256,43 @@ function tabsProducts(
   const tab = document.querySelectorAll(tabSelector);
   const content = document.querySelectorAll(contentSelector);
 
-  hideTabContent();
-  showTabContent();
+  if (header) {
 
-  function hideTabContent() {
-    content.forEach((item) => {
-      item.classList.remove('active');
-    });
-    tab.forEach((item) => {
-      item.classList.remove(activeClass);
+    hideTabContent();
+    showTabContent();
+
+    function hideTabContent() {
+      content.forEach((item) => {
+        item.classList.remove('active');
+      });
+      tab.forEach((item) => {
+        item.classList.remove(activeClass);
+      });
+    }
+
+    function showTabContent(i = 0) {
+      content[i].classList.add('active');
+      tab[i].classList.add(activeClass);
+    }
+
+    header.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        const target = e.target;
+        if (
+          target.classList.contains(tabSelector.replace(/\./, '')) ||
+          target.classList.parentNode.contains(tabSelector.replace(/\./, ''))
+        ) {
+          tab.forEach((item, i) => {
+            if (target == item || target.parentNode == item) {
+              hideTabContent();
+              showTabContent(i);
+            }
+          });
+        }
+      });
     });
   }
-
-  function showTabContent(i = 0) {
-    content[i].classList.add('active');
-    tab[i].classList.add(activeClass);
-  }
-
-  header.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      const target = e.target;
-      if (
-        target.classList.contains(tabSelector.replace(/\./, '')) ||
-        target.classList.parentNode.contains(tabSelector.replace(/\./, ''))
-      ) {
-        tab.forEach((item, i) => {
-          if (target == item || target.parentNode == item) {
-            hideTabContent();
-            showTabContent(i);
-          }
-        });
-      }
-    });
-  });
-}
+};
 tabsProducts(
   '.tab__list',
   '.tab__button',

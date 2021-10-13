@@ -21,7 +21,7 @@
     gap: var(--gap-30);
 
     @include breakpointsMaxW($bp-1290) {
-      // grid-template-columns: minmax(auto, 260px) 1fr;
+      grid-template-columns: minmax(auto, 260px) 1fr;
     }
 
     @include breakpointsMaxW($bp-991) {
@@ -38,7 +38,7 @@
       grid-template-columns: repeat(2, 1fr);
 
       @include breakpointsMaxW($bp-768) {
-        grid-template-columns:1fr !important;
+        grid-template-columns: 1fr !important;
       }
     }
 
@@ -95,6 +95,15 @@
 
     @include breakpointsMaxW($bp-768) {
       margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+
+    // Сделать по центру
+    @include breakpointsMaxW($bp-768) {
+      // display: grid;
+   
     }
   }
 }

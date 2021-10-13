@@ -49,29 +49,32 @@ const modals = () => {
     const overlayEl = document.querySelector(overlay);
     const body = document.querySelector('body');
 
-    openBtnEl.addEventListener('click', e => {
-      if (e.target) {
-        e.preventDefault()
-      }
 
-      modalEl.classList.add('active');
-      overlayEl.classList.add('active');
-      body.classList.add('no-scroll');
-    });
+    if (modalEl) {
+      openBtnEl.addEventListener('click', e => {
+        if (e.target) {
+          e.preventDefault()
+        }
 
-    closeEl.addEventListener('click', e => {
-      modalEl.classList.remove('active');
-      overlayEl.classList.remove('active');
-      body.classList.remove('no-scroll');
-    });
+        modalEl.classList.add('active');
+        overlayEl.classList.add('active');
+        body.classList.add('no-scroll');
+      });
 
-    modalEl.addEventListener('click', e => {
-      if (e.target === modalEl) {
+      closeEl.addEventListener('click', e => {
         modalEl.classList.remove('active');
         overlayEl.classList.remove('active');
         body.classList.remove('no-scroll');
-      }
-    })
+      });
+
+      modalEl.addEventListener('click', e => {
+        if (e.target === modalEl) {
+          modalEl.classList.remove('active');
+          overlayEl.classList.remove('active');
+          body.classList.remove('no-scroll');
+        }
+      })
+    };
   };
 
   bindModal('.user-menu__item--cart', '.cart', '.cart__close', '.overlay');
@@ -256,7 +259,7 @@ function tabsProducts(
   const tab = document.querySelectorAll(tabSelector);
   const content = document.querySelectorAll(contentSelector);
 
-  if (header) {
+  if (content && header && tab) {
 
     hideTabContent();
     showTabContent();

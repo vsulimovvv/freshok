@@ -1,5 +1,6 @@
 .hero {
   min-height: 600px;
+  z-index: var(--z-1);
 
   &__slide {
     background-repeat: no-repeat;

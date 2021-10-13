@@ -3,158 +3,161 @@
     <h2 class="catalog__title section-title">Каталог товаров</h2>
     <div class="catalog__wrapper">
       <aside class="catalog__sidebar sidebar">
-        <div class="sidebar__box sidebar-box sidebar-box--categories">
-          <div class="sidebar-box__top">
-            <h3 class="sidebar-box__title">Категории</h3>
-          </div>
-          <div class="sidebar-box__drop">
-            <ul class="sidebar-box__list">
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-              <li class="sidebar-box__item">
-                <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="sidebar__box sidebar-box sidebar-box--offers">
-          <div class="sidebar-box__top">
-            <h3 class="sidebar-box__title">Предложения</h3>
-          </div>
-          <div class="sidebar-box__drop">
-            <ul class="sidebar-box__list">
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  Со скидкой
-                </label>
-              </li>
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox" checked>
-                  <span class="check__box"></span>
-                  Новинка
-                </label>
-              </li>
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  Хит
-                </label>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="sidebar__box sidebar-box sidebar-box--brands">
-          <div class="sidebar-box__top">
-            <h3 class="sidebar-box__title">Бренд</h3>
-          </div>
-          <div class="sidebar-box__drop">
-            <ul class="sidebar-box__list">
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  CocaCola
-                </label>
-              </li>
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  Pepsi
-                </label>
-              </li>
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  Sprite
-                </label>
-              </li>
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  Fanta
-                </label>
-              </li>
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  RedBull
-                </label>
-              </li>
-              <li class="sidebar-box__item">
-                <label class="check">
-                  <input class="check__input" type="checkbox">
-                  <span class="check__box"></span>
-                  Dr Pepper
-                </label>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-        <div class="sidebar__box sidebar-box sidebar-box--price">
-          <div class="sidebar-box__top">
-            <h3 class="sidebar-box__title">Цена</h3>
-          </div>
-          <div class="sidebar-box__drop">
-            <div class="sidebar-box__inputs">
-              <label class="sidebar-box__label">
-                <span class="sidebar-box__text">от</span>
-                <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-0">
-                <span class="sidebar-box__text">₽</span>
-              </label>
-              <label class="sidebar-box__label">
-                <span class="sidebar-box__text">до</span>
-                <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-1">
-                <span class="sidebar-box__text">₽</span>
-              </label>
+        <div class="sidebar__container">
+          <button class="sidebar__close" type="button" aria-label="Закрыть фильтры"></button>
+          <div class="sidebar__box sidebar-box sidebar-box--categories">
+            <div class="sidebar-box__top">
+              <h3 class="sidebar-box__title">Категории</h3>
             </div>
-            <div class="sidebar-box__slider range-slider" id="range-slider"></div>
+            <div class="sidebar-box__drop">
+              <ul class="sidebar-box__list">
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="sidebar-box__item">
+                  <a class="sidebar-box__link" href="#">Овощи и фрукты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar__box sidebar-box sidebar-box--offers">
+            <div class="sidebar-box__top">
+              <h3 class="sidebar-box__title">Предложения</h3>
+            </div>
+            <div class="sidebar-box__drop">
+              <ul class="sidebar-box__list">
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    Со скидкой
+                  </label>
+                </li>
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox" checked>
+                    <span class="check__box"></span>
+                    Новинка
+                  </label>
+                </li>
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    Хит
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar__box sidebar-box sidebar-box--brands">
+            <div class="sidebar-box__top">
+              <h3 class="sidebar-box__title">Бренд</h3>
+            </div>
+            <div class="sidebar-box__drop">
+              <ul class="sidebar-box__list">
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    CocaCola
+                  </label>
+                </li>
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    Pepsi
+                  </label>
+                </li>
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    Sprite
+                  </label>
+                </li>
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    Fanta
+                  </label>
+                </li>
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    RedBull
+                  </label>
+                </li>
+                <li class="sidebar-box__item">
+                  <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    Dr Pepper
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar__box sidebar-box sidebar-box--price">
+            <div class="sidebar-box__top">
+              <h3 class="sidebar-box__title">Цена</h3>
+            </div>
+            <div class="sidebar-box__drop">
+              <div class="sidebar-box__inputs">
+                <label class="sidebar-box__label">
+                  <span class="sidebar-box__text">от</span>
+                  <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-0">
+                  <span class="sidebar-box__text">₽</span>
+                </label>
+                <label class="sidebar-box__label">
+                  <span class="sidebar-box__text">до</span>
+                  <input class="sidebar-box__input" type="number" min="0" max="1100" id="input-1">
+                  <span class="sidebar-box__text">₽</span>
+                </label>
+              </div>
+              <div class="sidebar-box__slider range-slider" id="range-slider"></div>
+            </div>
           </div>
         </div>
       </aside>
       <div class="catalog__content">
         <div class="catalog__actions filter-actions">
 
-          <button class="filter-actions__button filter-actions__button--filter"></button>
+          <button class="filter-actions__button filter-actions__button--show-filter"></button>
 
           <div class="filter-actions__select">
             <select class="select" name="select-1" id="select-1">

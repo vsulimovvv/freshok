@@ -7,4 +7,34 @@
       margin-bottom: var(--gap-30);
     }
   }
+
+  &__container {
+    position: relative;
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 320px;
+      background-color: #fff;
+      height: 100%;
+      padding: 10px;
+      padding-top: 76px;
+    }
+  }
+
+  &__close {
+    display: none;
+
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+      background-image: url('../images/icons/close.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+
 }

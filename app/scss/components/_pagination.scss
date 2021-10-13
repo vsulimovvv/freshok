@@ -31,6 +31,14 @@
     &:hover {
       border: 1px solid var(--color-dark-900);
     }
+
+    @include breakpointsMaxW($bp-768) {
+
+      &:nth-child(3),
+      &:nth-child(5) {
+        display: none;
+      }
+    }
   }
 
   &__link {

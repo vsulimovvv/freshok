@@ -65,14 +65,19 @@
       display: none;
     }
 
+    @include breakpointsMaxW($bp-991) {
+      &:first-child {
+        display: block;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
     @include breakpointsMaxW($bp-768) {
       &:not(:first-child) {
         display: none;
-      }
-
-      &:first-child {
-        display: block;
-        margin-right: 10px;
       }
     }
 
@@ -92,7 +97,7 @@
       }
     }
 
-    &--filter {
+    &--show-filter {
       background-image: url('../images/icons/filter-icon.svg');
     }
   }

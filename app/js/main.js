@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', e => {
+  sliderSingleProduct();
+});
+
 const hoverMenuDropdown = () => {
   // const parentEl = document.querySelector('.dropdown');
   const lineEl = document.querySelector('.dropdown__divider');
@@ -23,32 +27,19 @@ const hoverMenuDropdown = () => {
 }
 hoverMenuDropdown();
 
-const toggleDropdown = () => {
-  const popupParent = document.querySelector('.dropdown');
-  if (popupParent) {
+const togglePopup = (popup, popupBtn) => {
+  const popupParentEl = document.querySelector(popup);
+  const popupBtnEl = document.querySelector(popupBtn);
 
-    popupParent.addEventListener('click', function (e) {
-      let target = e.target;
-
-      if (target.closest('.dropdown__button')) {
-        this.classList.toggle('active');
-      }
+  if (popupParentEl) {
+    popupBtnEl.addEventListener('click', e => {
+      popupParentEl.classList.toggle('active')
     })
   }
-};
-toggleDropdown();
-
-const toggleSearch = () => {
-  const popupParent = document.querySelector('.form-search--mobile');
-  const popupBtn = document.querySelector('.user-menu__item--search');
-  if (popupParent) {
-
-    popupBtn.addEventListener('click', e => {
-      popupParent.classList.toggle('active')
-    })
-  }
-};
-toggleSearch();
+}
+togglePopup('.form-search--mobile', '.user-menu__item--search');
+togglePopup('.dropdown', '.dropdown__button');
+// togglePopup('.sidebar', '.filter-actions__button--filter');
 
 const modals = () => {
   function bindModal(openBtn, modal, close, overlay) {
@@ -56,6 +47,7 @@ const modals = () => {
     const modalEl = document.querySelector(modal);
     const closeEl = document.querySelector(close);
     const overlayEl = document.querySelector(overlay);
+    const body = document.querySelector('body');
 
     openBtnEl.addEventListener('click', e => {
       if (e.target) {
@@ -64,23 +56,27 @@ const modals = () => {
 
       modalEl.classList.add('active');
       overlayEl.classList.add('active');
+      body.classList.add('no-scroll');
     });
 
     closeEl.addEventListener('click', e => {
       modalEl.classList.remove('active');
       overlayEl.classList.remove('active');
+      body.classList.remove('no-scroll');
     });
 
     modalEl.addEventListener('click', e => {
       if (e.target === modalEl) {
         modalEl.classList.remove('active');
         overlayEl.classList.remove('active');
+        body.classList.remove('no-scroll');
       }
     })
   }
 
   bindModal('.user-menu__item--cart', '.cart', '.cart__close', '.overlay');
   bindModal('.header__toggle', '.mobile-menu', '.mobile-menu__close', '.overlay');
+  bindModal('.filter-actions__button--show-filter', '.catalog__sidebar', '.sidebar__close', '.overlay');
 };
 modals();
 
@@ -161,7 +157,7 @@ function mix(mixContainer1, mixContainer2) {
 }
 mix('[data-ref="container-1"]', '[data-ref="container-2"]');
 
-const dropSidebox = () => {
+const toggleFullSidebox = () => {
   const boxesTop = document.querySelectorAll('.sidebar-box__top');
 
   boxesTop.forEach(top => {
@@ -171,20 +167,7 @@ const dropSidebox = () => {
     });
   });
 };
-
-dropSidebox();
-
-const showFilters = () => {
-  const btn = document.querySelector('.filter-actions__button--filter');
-  const sidebar = document.querySelector('.sidebar');
-
-  if (btn && sidebar) {
-    btn.addEventListener('click', e => {
-      sidebar.classList.add('active')
-    });
-  }
-};
-showFilters();
+toggleFullSidebox();
 
 const toggleView = () => {
   const items = document.querySelectorAll('.catalog__item article');
@@ -260,7 +243,6 @@ const rangeSliderForPrice = () => {
     };
   });
 };
-
 rangeSliderForPrice();
 
 // Tab
@@ -315,19 +297,6 @@ tabsProducts(
   'tab__button--active'
 );
 
-// ! Sldier
-// const sliderRec = document.querySelector('.recommendations__slider');
-// if (sliderRec) {
-//   const swiper = new Swiper(sliderRec, {
-//     slidesPerView: 1,
-//     loop: true,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
-// }
-
 const sliderGroup = () => {
   const sliderRec = document.querySelector('.recommendations__slider');
   const nextBtn = document.querySelector('.arrow-next');
@@ -345,6 +314,7 @@ const sliderGroup = () => {
       },
       pagination: {
         el: ".swiper-pagination",
+        // clickcable: true
       },
       breakpoints: {
         320: {
@@ -366,3 +336,13 @@ const sliderGroup = () => {
   }
 };
 sliderGroup();
+
+function sliderSingleProduct() {
+  const slider = document.querySelector(".carousel");
+  if (slider) {
+    const myCarousel = new Carousel(slider, {
+      'slidesPerPage': 1,
+      'center': true
+    });
+  }
+};

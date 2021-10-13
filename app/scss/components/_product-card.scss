@@ -215,9 +215,20 @@
     font-size: 10px;
     line-height: 1;
     letter-spacing: 0.03em;
-    color: var(--color-green-900);
     text-transform: uppercase;
     display: inline-block;
+
+    &--in-stock {
+      color: var(--color-green-900);
+    }
+
+    &--out-stock {
+      color: var(--color-silver-600);
+    }
+
+    &--soon-end {
+      color: var(--color-red-900);
+    }
   }
 }
 
@@ -383,6 +394,10 @@
 }
 
 .product-card--cart {
+  &:hover {
+    transform: translateY(0);
+  }
+
   max-width: 100%;
   display: flex;
   align-items: flex-end;

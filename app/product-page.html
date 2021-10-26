@@ -29,16 +29,16 @@
       </svg>
     </button>
     <div class="slider-popup__body carousel">
-        <div class="carousel__slide">
-          <img src="images/products/product-big-1.jpg" alt="">
-        </div>
-        <div class="carousel__slide">
-          <img src="images/products/product-1.png" alt="">
-        </div>
-        <div class="carousel__slide">
-          <img src="images/products/product-1.png" alt="">
-        </div>
-    
+      <div class="carousel__slide">
+        <img src="images/products/product-big-1.jpg" alt="Питахайя">
+      </div>
+      <div class="carousel__slide">
+        <img src="images/products/product-big-1.jpg" alt="Питахайя">
+      </div>
+      <div class="carousel__slide">
+        <img src="images/products/product-big-1.jpg" alt="Питахайя">
+      </div>
+
     </div>
   </div>
   <div class="wrapper">
@@ -329,18 +329,17 @@
       </div>
 
       <section class="product-section">
-
   <div class="container">
     <div class="product-section__wrapper">
       <div class="product-section__preview carousel">
         <div class="carousel__slide">
-          <img src="images/products/product-1.png" alt="">
+          <img src="images/products/product-single.jpg" alt="">
         </div>
         <div class="carousel__slide">
-          <img src="images/products/product-1.png" alt="">
+          <img src="images/products/product-single.jpg" alt="">
         </div>
         <div class="carousel__slide">
-          <img src="images/products/product-1.png" alt="">
+          <img src="images/products/product-single.jpg" alt="">
         </div>
       </div>
 
@@ -357,7 +356,7 @@
           </div>
 
           <div class="product-info__rating">
-            <fieldset class="rating">
+            <fieldset class="rating nohover">
               <legend class="rating__caption visually-hidden">Райтинг товара</legend>
               <div class="rating__group">
                 <input class="rating__star" type="radio" name="product-1" value="1" aria-label="Ужасно">
@@ -370,7 +369,7 @@
           </div>
 
           <div class="product-info__availability">
-            В НАЛИЧИИ
+            в наличии
           </div>
         </div>
 
@@ -381,9 +380,17 @@
 
         <div class="product-info__actions">
           <div class="product-info__counter">
-            <button class="product-info__action product-info__action--decrease">-</button>
-            <input class="product-info__quantity" type="number" value="2" data-price="999" readonly>
-            <button class="product-info__action product-info__action__action--increase">+</button>
+            <button class="product-info__action product-info__action--decrease">
+              <svg>
+                <use xlink:href="images/sprite.svg#minus"></use>
+              </svg>
+            </button>
+            <input class="product-info__quantity" type="number" value="1" data-price="999" readonly>
+            <button class="product-info__action product-info__action__action--increase">
+              <svg>
+                <use xlink:href="images/sprite.svg#plus"></use>
+              </svg>
+            </button>
           </div>
           <button class="product-info__add-cart button button--green"><span>ДОБАВИТЬ В КОРЗИНУ</span></button>
           <button class="product-info__favorite"></button>
@@ -403,10 +410,10 @@
       </div>
     </div>
   </div>
-</section>
-
-<section class="tab">
-  <div class="container">
+  
+  <div class="divider"></div>
+  
+  <div class="tab">
     <ul class="tab__list">
       <li class="tab__item ">
         <button class="tab__button tab__button--active">ОПИСАНИЕ</button>
@@ -421,10 +428,12 @@
     <div class="tab__body">
       <div class="tab__body-list tab-description fadeIn active">
         <p>
-          Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует укреплению
+          Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
+          укреплению
           иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает
           противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении питахайи, понижается
-          уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный
+          уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт
+          низкокалорийный
           и
           состоит на 90% из воды, способствует снижению веса.
         </p>
@@ -448,7 +457,7 @@
 
         <ul class="reviews__list">
           <li class="reviews__item">
-            <article class="reviews__review review">
+            <article class="review">
               <div class="review__top">
                 <div class="review__top-info">
                   <img class="review__img" src="images/review.jpg" alt="">
@@ -459,14 +468,16 @@
                 </div>
 
                 <div class="review__rating">
-                  <fieldset class="rating">
+                  <fieldset class="rating nohover">
                     <legend class="rating__caption visually-hidden">Райтинг покупателя</legend>
                     <div class="rating__group">
-                      <input class="rating__star" type="radio" name="customer-1" value="1" aria-label="Ужасно">
-                      <input class="rating__star" type="radio" name="customer-1" value="2" aria-label="Сносно">
-                      <input class="rating__star" type="radio" name="customer-1" value="3" aria-label="Нормально">
-                      <input class="rating__star" type="radio" name="customer-1" value="4" aria-label="Хорошо" checked>
-                      <input class="rating__star" type="radio" name="customer-1" value="5" aria-label="Отлично">
+                      <input class="rating__star nohover" type="radio" name="customer-1" value="1" aria-label="Ужасно">
+                      <input class="rating__star nohover" type="radio" name="customer-1" value="2" aria-label="Сносно">
+                      <input class="rating__star nohover" type="radio" name="customer-1" value="3"
+                        aria-label="Нормально">
+                      <input class="rating__star nohover" type="radio" name="customer-1" value="4" aria-label="Хорошо"
+                        checked>
+                      <input class="rating__star nohover" type="radio" name="customer-1" value="5" aria-label="Отлично">
                     </div>
                   </fieldset>
                 </div>
@@ -475,23 +486,21 @@
               <div class="review__text">
                 <p> Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))</p>
               </div>
-
-
             </article>
           </li>
           <li class="reviews__item">
-            <article class="reviews__review review">
+            <article class="review">
               <div class="review__top">
                 <div class="review__top-info">
                   <img class="review__img" src="images/review.jpg" alt="">
                   <div class="review__data">
-                    <h4 class="review__name">Андрей</h4>
-                    <time class="review__date">10.06.2021</time>
+                    <h4 class="review__name">Екатерина Белая</h4>
+                    <time class="review__date">7.06.2021</time>
                   </div>
                 </div>
 
                 <div class="review__rating">
-                  <fieldset class="rating">
+                  <fieldset class="rating nohover">
                     <legend class="rating__caption visually-hidden">Райтинг покупателя</legend>
                     <div class="rating__group">
                       <input class="rating__star" type="radio" name="customer-2" value="1" aria-label="Ужасно">
@@ -505,12 +514,11 @@
               </div>
 
               <div class="review__text">
-                <p> Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет.
+                <p> Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но
+                  нет.
                   Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать
                   экзотические фрукты.</p>
               </div>
-
-
             </article>
           </li>
         </ul>
@@ -520,39 +528,42 @@
 
           <div class="add-review">
             <div class="add-review__grade">
-              <span class="">Ваша оценка *</span>
-              <fieldset class="rating">
-                <legend class="rating__caption visually-hidden">Райтинг покупателя</legend>
-                <div class="rating__group">
-                  <input class="rating__star" type="radio" name="new-customer" value="1" aria-label="Ужасно">
-                  <input class="rating__star" type="radio" name="new-customer" value="2" aria-label="Сносно">
-                  <input class="rating__star" type="radio" name="new-customer" value="3" aria-label="Нормально">
-                  <input class="rating__star" type="radio" name="new-customer" value="4" aria-label="Хорошо">
-                  <input class="rating__star" type="radio" name="new-customer" value="5" aria-label="Отлично">
-                </div>
-              </fieldset>
+              <span class="add-review__title">Ваша оценка *</span>
+              <div class="add-review__rating">
+                <fieldset class="rating nohover">
+                  <legend class="rating__caption visually-hidden">Райтинг покупателя</legend>
+                  <div class="rating__group">
+                    <input class="rating__star" type="radio" name="new-customer" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="new-customer" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="new-customer" value="3" aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="new-customer" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="new-customer" value="5" aria-label="Отлично">
+                  </div>
+                </fieldset>
+              </div>
             </div>
             <form class="add-review__form form-add-review">
 
               <div class="form-add-review__wrapper">
                 <div class="">
                   <div class="form-add-review__group">
-                    <label for="message">Ваш отзыв *</label>
-                    <textarea class="form-add-review__input input input--textarea" name="message" id="message"
-                      placeholder="Введите текст отзыва"></textarea>
+                    <label class="form-add-review__label" for="message">Ваш отзыв *</label>
+                    <textarea class="form-add-review__input form-add-review__input--textarea" name="message"
+                      id="message" placeholder="Введите текст отзыва"></textarea>
                   </div>
                 </div>
 
                 <div class="form-add-review__inputs">
                   <div class="form-add-review__group">
-                    <label for="name"> Имя </label> <input class="form-add-review__input input" id="name" type="text"
-                      name="name" placeholder="Введите ваше имя" required>
+                    <label class="form-add-review__label" for="name">Имя</label>
+                    <input class="form-add-review__input" id="name" type="text" name="name"
+                      placeholder="Введите ваше имя" required>
                   </div>
                   <div class="form-add-review__group">
-                    <label for="email">
+                    <label class="form-add-review__label" for="email">
                       Email
                     </label>
-                    <input class="form-add-review__input input" id="email" type="email" name="email"
+                    <input class="form-add-review__input" id="email" type="email" name="email"
                       placeholder="youremail@mail.com" required>
                   </div>
                 </div>
@@ -574,13 +585,14 @@
       </div>
     </div>
   </div>
+
 </section>
       <section class="recommendations">
   <div class="container">
     <div class="recommendations__wrapper">
       <div class="recommendations__top">
         <h2 class="recommendations__title section-title">
-          ВАС МОЖЕТ ЗАИНТЕРЕСОВАТь
+          вас может заинтересовать
         </h2>
         <div class="recommendations__arrows swiper-navigation">
           <button id="swiperPrev" class="recommendations__arrow recommendations__arrow--prev arrow-prev">
@@ -598,234 +610,226 @@
       <div class="recommendations__slider swiper">
         <ul class="recommendations__slides swiper-wrapper">
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>
           <li class="recommendations__slide swiper-slide">
-            <article class="product-card">
-              <div class="product-card__top">
-                <div class="product-card__badges">
-                  <span class="product-card__badge product-card__badge--new">Новинка</span>
-                  <span class="product-card__badge product-card__badge--sale">-50%</span>
-                </div>
-                <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#favorite-link"></use>
-                  </svg>
-                </button>
+            <article class="product-card product-card--catalog">
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
               </div>
+
+              <div class="product-card__rating">4.5</div>
+
+              <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
+              <button class="product-card__favorite" type="button" aria-label="Добавть в желания">
+                <svg>
+                  <use xlink:href="images/sprite.svg#favorite-link"></use>
+                </svg>
+              </button>
               <div class="product-card__img">
                 <img src="images/products/product-1.png" alt="Ананас">
               </div>
-              <div class="product-card__bottom">
+              <div class="product-card__info">
+                <span class="product-card__availability">В наличии</span>
                 <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
+
                 <div class="product-card__prices">
                   <span class="product-card__price product-card__price--old">1999 ₽ </span>
                   <span class="product-card__price product-card__price--new">199 ₽ </span>
                 </div>
-
-                <button class="product-card__cart" type="button" aria-label="Добавть в карзину"></button>
-
-                <div class="product-card__rating">4.5</div>
               </div>
             </article>
           </li>

@@ -1,7 +1,9 @@
 .breadcrumbs {
   background-color: var(--color-silver-100);
   padding: 24px 0;
-
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  
   &__list {
     display: flex;
   }

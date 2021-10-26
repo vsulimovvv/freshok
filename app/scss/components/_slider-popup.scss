@@ -61,12 +61,16 @@
         object-fit: contain;
         display: block;
       }
+      @include breakpointsMaxW($bp-768){
+        img {
+          max-width: 360px;
+          height: 360px;
+        }
+      }
     }
 
     .is-next {
       right: 0;
     }
-
-
   }
 }

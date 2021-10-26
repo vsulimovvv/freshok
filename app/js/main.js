@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', e => {
-  sliderSingleProduct();
+  // sliderSingleProduct();
 });
 
 const hoverMenuDropdown = () => {
@@ -42,7 +42,7 @@ togglePopup('.dropdown', '.dropdown__button');
 // togglePopup('.sidebar', '.filter-actions__button--filter');
 
 const modals = () => {
-  function bindModal(openBtn, modal, close, overlay) {
+  function bindModal(openBtn, modal, close, overlay = 'overaly') {
     const openBtnEl = document.querySelector(openBtn);
     const modalEl = document.querySelector(modal);
     const closeEl = document.querySelector(close);
@@ -80,8 +80,44 @@ const modals = () => {
   bindModal('.user-menu__item--cart', '.cart', '.cart__close', '.overlay');
   bindModal('.header__toggle', '.mobile-menu', '.mobile-menu__close', '.overlay');
   bindModal('.filter-actions__button--show-filter', '.catalog__sidebar', '.sidebar__close', '.overlay');
+  bindModal('.product-section__preview', '.slider-popup', '.slider-popup__close', '.overlay');
 };
 modals();
+
+
+const modalsSlider = () => {
+  function bindModal(openBtn, modal, close) {
+    const openBtnEl = document.querySelector(openBtn);
+    const modalEl = document.querySelector(modal);
+    const closeEl = document.querySelector(close);
+    const body = document.querySelector('body');
+
+    if (modalEl) {
+      openBtnEl.addEventListener('click', e => {
+        if (e.target) {
+          e.preventDefault()
+        }
+
+        modalEl.classList.add('active');
+        body.classList.add('no-scroll');
+      });
+
+      closeEl.addEventListener('click', e => {
+        modalEl.classList.remove('active');
+        body.classList.remove('no-scroll');
+      });
+
+      modalEl.addEventListener('click', e => {
+        if (e.target === modalEl) {
+          modalEl.classList.remove('active');
+          body.classList.remove('no-scroll');
+        }
+      })
+    };
+  };
+  bindModal('.product-section__preview', '.slider-popup', '.slider-popup__close');
+};
+modalsSlider();
 
 const sliderWithSlideOnePerView = (sliderSelector) => {
   const slider = document.querySelector(sliderSelector);
@@ -343,8 +379,8 @@ const sliderGroup = () => {
 };
 sliderGroup();
 
-function sliderSingleProduct() {
-  const slider = document.querySelector(".carousel");
+function sliderSingleProduct(element) {
+  const slider = document.querySelector(element);
   if (slider) {
     const myCarousel = new Carousel(slider, {
       'slidesPerPage': 1,
@@ -352,3 +388,5 @@ function sliderSingleProduct() {
     });
   }
 };
+sliderSingleProduct('.product-section__preview');
+sliderSingleProduct('.slider-popup__body');

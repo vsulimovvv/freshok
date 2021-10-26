@@ -1,6 +1,7 @@
 .product-section {
   padding-top: var(--gap-48);
   padding-bottom: calc(var(--gap-30) * 2);
+  position: relative;
 
   &__preview {
     border: 1px solid #c1c1c1;
@@ -11,6 +12,46 @@
 
     @include breakpointsMaxW($bp-991) {
       height: 450px;
+    }
+
+    .carousel {
+      &__slide {
+        width: 100%;
+        min-height: 558px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpointsMaxW($bp-1290) {
+          min-height: 500px;
+        }
+
+        @include breakpointsMaxW($bp-991) {
+          min-height: 450px;
+        }
+
+        img {
+          max-width: 420px;
+          width: 100%;
+          height: 420px;
+          object-fit: contain;
+          display: block;
+
+          @include breakpointsMaxW($bp-1290) {
+            max-width: 400px;
+            height: 400px;
+          }
+
+          @include breakpointsMaxW($bp-991) {
+            max-width: 350px;
+            height: 350px;
+          }
+        }
+      }
+
+      &__dots {
+        display: none;
+      }
     }
   }
 
@@ -32,65 +73,8 @@
   }
 }
 
-.carousel {
-  &__slide {
-    width: 100%;
-    min-height: 558px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding: 69px 105px;
 
-    @include breakpointsMaxW($bp-1290) {
-      min-height: 500px;
-    }
 
-    @include breakpointsMaxW($bp-991) {
-      min-height: 450px;
-    }
-
-    img {
-      max-width: 420px;
-      width: 100%;
-      height: 420px;
-      object-fit: contain;
-      display: block;
-
-      @include breakpointsMaxW($bp-1290) {
-        max-width: 400px;
-        height: 400px;
-      }
-
-      @include breakpointsMaxW($bp-991) {
-        max-width: 350px;
-        height: 350px;
-      }
-    }
-  }
-
-  &__dots {
-    display: none;
-  }
-
-  &__button {
-    transform: scale(2) !important;
-  }
-}
-
-// .fancybox__slide {
-//   width: 100%;
-//   height: 100%;
-
-//   .fancybox__content {
-//     img {
-//       width: 750px !important;
-//       height: 750px !important;
-//     }
-//   }
-// }
-.carousel__viewport {
-  // height: 100px;
-}
 
 .product-info {
   &__title {
@@ -267,3 +251,5 @@
     }
   }
 }
+
+

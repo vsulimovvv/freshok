@@ -22,6 +22,25 @@
 </head>
 
 <body>
+  <div class="slider-popup">
+    <button class="slider-popup__close" type="button" aria-label="Закрыть окно слайдера">
+      <svg>
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="slider-popup__body carousel">
+        <div class="carousel__slide">
+          <img src="images/products/product-big-1.jpg" alt="">
+        </div>
+        <div class="carousel__slide">
+          <img src="images/products/product-1.png" alt="">
+        </div>
+        <div class="carousel__slide">
+          <img src="images/products/product-1.png" alt="">
+        </div>
+    
+    </div>
+  </div>
   <div class="wrapper">
     <header class="header">
 
@@ -310,18 +329,19 @@
       </div>
 
       <section class="product-section">
+
   <div class="container">
     <div class="product-section__wrapper">
       <div class="product-section__preview carousel">
-        <a class="carousel__slide" data-fancybox="gallery" data-src="images/gallery.jpg" href="#">
+        <div class="carousel__slide">
           <img src="images/products/product-1.png" alt="">
-        </a>
-        <a class="carousel__slide" data-fancybox="gallery" data-src="images/products/product-1.png" href="#">
+        </div>
+        <div class="carousel__slide">
           <img src="images/products/product-1.png" alt="">
-        </a>
-        <a class="carousel__slide" data-fancybox="gallery" data-src="images/products/product-1.png" href="#">
+        </div>
+        <div class="carousel__slide">
           <img src="images/products/product-1.png" alt="">
-        </a>
+        </div>
       </div>
 
       <div class="product-section__info product-info">

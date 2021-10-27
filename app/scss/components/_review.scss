@@ -109,6 +109,11 @@
     grid-template-columns: minmax(auto, 400px) minmax(auto, 260px);
     gap: var(--gap-30);
     margin-bottom: 5px;
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
   }
 
   &__inputs {

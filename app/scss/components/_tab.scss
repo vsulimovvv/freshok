@@ -10,6 +10,11 @@
     justify-content: space-between;
     padding: 0px 28px;
     margin-bottom: var(--gap-48);
+
+    @include breakpointsMaxW($bp-576) {
+      width: 100%;
+      padding: 0 15px;
+    }
   }
 
   &__button {
@@ -20,6 +25,10 @@
     text-transform: uppercase;
     transition: color 150ms ease-in;
     position: relative;
+
+    @include breakpointsMaxW($bp-576) {
+      font-size: 14px;
+    }
 
     &::after {
       position: absolute;
@@ -52,7 +61,7 @@
     }
   }
 
-  &__body{
+  &__body {
     padding: 0 15px;
   }
 

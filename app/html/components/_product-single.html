@@ -3,13 +3,13 @@
     <div class="product-section__wrapper">
       <div class="product-section__preview carousel">
         <div class="carousel__slide">
-          <img src="images/products/product-single.jpg" alt="">
+          <img src="images/products/single/p-1.jpg" alt="">
         </div>
         <div class="carousel__slide">
-          <img src="images/products/product-single.jpg" alt="">
+          <img src="images/products/single/p-1.jpg" alt="">
         </div>
         <div class="carousel__slide">
-          <img src="images/products/product-single.jpg" alt="">
+          <img src="images/products/single/p-1.jpg" alt="">
         </div>
       </div>
 
@@ -80,9 +80,9 @@
       </div>
     </div>
   </div>
-  
+
   <div class="divider"></div>
-  
+
   <div class="tab">
     <ul class="tab__list">
       <li class="tab__item ">
@@ -92,7 +92,7 @@
         <button class="tab__button">ХАРАКТЕРИСТИКИ</button>
       </li>
       <li class="tab__item">
-        <button class="tab__button">ОТЗЫВЫ (2)</button>
+        <button class="tab__button">ОТЗЫВЫ (<span></span>)</button>
       </li>
     </ul>
     <div class="tab__body">
@@ -122,7 +122,7 @@
         <p><span class="tab-specifications__name">Срок хранения:</span> до 5 дней.</p>
       </div>
       <!-- ! REVIEWS -->
-      <div class="tab__body-list tab-reviews reviews fadeIn">
+      <div class="tab__body-list tab-reviews reviews fadeIn ">
         <h3 class="reviews__title">Мнения наших клиентов</h3>
 
         <ul class="reviews__list">
@@ -200,26 +200,26 @@
             <div class="add-review__grade">
               <span class="add-review__title">Ваша оценка *</span>
               <div class="add-review__rating">
-                <fieldset class="rating nohover">
+                <fieldset class="rating">
                   <legend class="rating__caption visually-hidden">Райтинг покупателя</legend>
                   <div class="rating__group">
-                    <input class="rating__star" type="radio" name="new-customer" value="1" aria-label="Ужасно">
-                    <input class="rating__star" type="radio" name="new-customer" value="2" aria-label="Сносно">
-                    <input class="rating__star" type="radio" name="new-customer" value="3" aria-label="Нормально">
-                    <input class="rating__star" type="radio" name="new-customer" value="4" aria-label="Хорошо">
-                    <input class="rating__star" type="radio" name="new-customer" value="5" aria-label="Отлично">
+                    <input class="rating__star" type="radio" name="new-customer-1" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="new-customer-1" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="new-customer-1" value="3" aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="new-customer-1" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="new-customer-1" value="5" aria-label="Отлично">
                   </div>
                 </fieldset>
               </div>
             </div>
-            <form class="add-review__form form-add-review">
+            <form class="add-review__form form-add-review" name="addReview">
 
               <div class="form-add-review__wrapper">
                 <div class="">
                   <div class="form-add-review__group">
                     <label class="form-add-review__label" for="message">Ваш отзыв *</label>
                     <textarea class="form-add-review__input form-add-review__input--textarea" name="message"
-                      id="message" placeholder="Введите текст отзыва"></textarea>
+                      id="message" placeholder="Введите текст отзыва" required></textarea>
                   </div>
                 </div>
 
@@ -233,15 +233,15 @@
                     <label class="form-add-review__label" for="email">
                       Email
                     </label>
-                    <input class="form-add-review__input" id="email" type="email" name="email"
-                      placeholder="youremail@mail.com" required>
+                    <input class="form-add-review__input" id="email" type="text" name="email" required
+                      placeholder="youremail@mail.com">
                   </div>
                 </div>
 
               </div>
               <div class="form-add-review__check">
                 <label class="check">
-                  <input class="check__input" type="checkbox">
+                  <input class="check__input" type="checkbox" required>
                   <span class="check__box"></span>
                   Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
                 </label>

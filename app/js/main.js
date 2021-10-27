@@ -390,3 +390,124 @@ function sliderSingleProduct(element) {
 };
 sliderSingleProduct('.product-section__preview');
 sliderSingleProduct('.slider-popup__body');
+
+
+// ? Show number of reveiws
+
+
+function addReviewToPage() {
+  const reviewsContainer = document.querySelector('.reviews__list');
+  const form = document.forms['addReview'];
+  const inputName = form.elements['name'];
+  const inputEmail = form.elements['email'];
+  const inputMessage = form.elements['message'];
+  inputName.setAttribute('required', 'required')
+
+  const addBtn = document.querySelector('.form-add-review__submit');
+
+  function showNumberOfReviews() {
+    const reviews = document.querySelectorAll('.review');
+    const number = document.querySelector('.tab__button span');
+
+    if (reviews) {
+      const quantiy = reviews.length;
+      number.textContent = quantiy;
+    }
+  }
+
+  showNumberOfReviews();
+
+  function checkInputs() {
+    const nameValue = inputName.value.trim();
+    const emailValue = inputEmail.value.trim();
+    const messageValue = inputMessage.value.trim();
+
+    if (nameValue === '') {
+      setErrorFor(inputName, 'Username cannot be blank');
+    } else {
+      setSuccessFor(inputName);
+    }
+
+    if (emailValue === '') {
+      setErrorFor(inputEmail, 'Email cannot be blank');
+    } else if (!isEmail(inputEmail)) {
+      setErrorFor(inputEmail, 'Not a valid email');
+    } else {
+      setSuccessFor(inputEmail);
+    }
+
+    if (messageValue === '') {
+      setErrorFor(inputMessage, 'Password cannot be blank');
+    } else {
+      setSuccessFor(inputMessage);
+    }
+  }
+
+  function setErrorFor(input, message) {
+    input.className = 'form-add-review__input error';
+  }
+
+  function setSuccessFor(input) {
+    input.className = 'form-add-review__input success';
+  }
+
+  function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+  }
+
+  function generateReview() {
+    const nameValue = inputName.value;
+    const emailValue = inputEmail.value;
+    const messageValue = inputMessage.value;
+
+    return `
+          <li class="reviews__item">
+            <article class="review">
+              <div class="review__top">
+                <div class="review__top-info">
+                  <img class="review__img" src="images/review.jpg" alt="">
+                  <div class="review__data">
+                    <h4 class="review__name">${nameValue}</h4>
+                    <time class="review__date">${new Date().toLocaleDateString()}</time>
+                  </div>
+                </div>
+
+                <div class="review__rating">
+                  <fieldset class="rating nohover">
+                    <legend class="rating__caption visually-hidden">Райтинг покупателя</legend>
+                    <div class="rating__group">
+                      <input class="rating__star" type="radio" name="customer-2" value="1" aria-label="Ужасно">
+                      <input class="rating__star" type="radio" name="customer-2" value="2" aria-label="Сносно">
+                      <input class="rating__star" type="radio" name="customer-2" value="3" aria-label="Нормально">
+                      <input class="rating__star" type="radio" name="customer-2" value="4" aria-label="Хорошо">
+                      <input class="rating__star" type="radio" name="customer-2" value="5" aria-label="Отлично" checked>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="review__text">
+                <p>${messageValue}</p>
+              </div>
+            </article>
+          </li>
+  `
+  }
+
+  addBtn.addEventListener('click', e => {
+    e.preventDefault();
+
+
+    if (inputName.value && inputEmail.value && inputMessage.value) {
+      reviewsContainer.insertAdjacentHTML('afterbegin', generateReview());
+
+      showNumberOfReviews();
+    }
+
+    checkInputs();
+
+    form.reset();
+  });
+}
+
+// addReviewToPage();

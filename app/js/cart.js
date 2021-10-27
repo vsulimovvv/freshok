@@ -157,3 +157,4 @@ cartBodyEl.addEventListener('click', e => {
 
 // ! Надо подумать
 // init();
+

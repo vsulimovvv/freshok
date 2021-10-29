@@ -21,90 +21,6 @@
   <div class="overlay"></div>
 
   <div class="wrapper">
-    <!-- <div class="mobile-menu">
-  <div class="mobile-menu__wrapper">
-
-    <div class="mobile-menu__top">
-      <a class="logo" href="#">
-        <img src="images/logo-green.svg" alt="">
-      </a>
-
-      <button class="mobile-menu__close"></button>
-    </div>
-
-    <button class="mobile-menu__signup button button--green" type="button">
-      <a href="#">Вход</a>
-      <a href="#">Регистрация</a>
-    </button>
-    <a class="mobile-menu__btn-catalog" href="#">
-      Каталог товаров
-    </a>
-
-    <address class="mobile-menu__contacts contacts">
-      <div class="contacts__address">
-        <a class="contacts__address--tel" href="tel:7907288365">+7 907 288 365</a>
-        <a class="contacts__address--location" href="#">Санкт-Петербург, ул. Ленина, 1</a>
-      </div>
-      <ul class="contacts__socials socials socials--mobile">
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <svg>
-              <use xlink:href="images/sprite.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <svg>
-              <use xlink:href="images/sprite.svg#youtube"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <svg>
-              <use xlink:href="images/sprite.svg#telegram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <svg>
-              <use xlink:href="images/sprite.svg#instagram"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </address>
-
-    <ul class="mobile-menu__list">
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Доставка</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">О нас</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Новости</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Контакты</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Акции</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Вакансии</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Отзывы</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Публичная оферта</a>
-      </li>
-    </ul>
-  </div>
-</div> -->
     <h1 class="visually-hidden">Главная страница интернет-магазина ФРЕШОК</h1>
     <header class="header">
 
@@ -113,7 +29,7 @@
 
       <div class="mobile-menu__top">
         <a class="logo" href="#">
-          <img src="images/logo-green.svg" alt="">
+          <img src="images/logo-green.svg" alt="Логоти">
         </a>
 
         <button class="mobile-menu__close" type="button" aria-label="Закрыть меню"></button>
@@ -337,12 +253,10 @@
         </button>
       </div>
       <ul class="cart__list">
-       <li class="cart__item">
+        <li class="cart__item">
           <article class="product-card product-card--cart">
             <div class="product-card__img">
-              <img
-                src="images/products/top/p-1.jpg"
-                alt="Ананас">
+              <img src="images/products/top/p-1.jpg" alt="Ананас">
             </div>
             <div class="product-card__info">
               <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
@@ -351,15 +265,17 @@
               </div>
             </div>
             <div class="product-card__actions">
-              <button class="product-card__action product-card__action--decrease">-</button>
+              <button class="product-card__action product-card__action--decrease" type="button"
+                aria-label="Уменьшить количество товара">-</button>
               <input class="product-card__quantity" type="number" value="2" data-price="999" readonly>
-              <button class="product-card__action product-card__action--increase">+</button>
+              <button class="product-card__action product-card__action--increase" type="button"
+                aria-label="Увеличить количество товара">+</button>
               <div class="product-card__subtotal-price"></div>
             </div>
 
             <button class="product-card__close" type="button" aria-label="Удалить товар из корзину"></button>
           </article>
-        </li> 
+        </li>
       </ul>
 
       <div class="cart__bottom">
@@ -1005,7 +921,7 @@
   <div class="footer__top">
     <div class="container">
       <a class="logo" href="#">
-        <img src="images/logo.png" alt="">
+        <img src="images/logo.png" alt="Логотип">
       </a>
     </div>
   </div>

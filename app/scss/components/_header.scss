@@ -2,9 +2,10 @@
   position: relative;
   line-height: 1.4;
   letter-spacing: 0.03em;
+  font-family: $OpenSans;
 
   &__top {
-    font-family: $OpenSansSemibold;
+    font-weight: 700;
     background-color: var(--color-dark-800);
     color: var(--color-white);
     font-size: 13px;

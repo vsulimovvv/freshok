@@ -41,7 +41,9 @@
 
     </div>
   </div>
+  <div class="overlay"></div>
   <div class="wrapper">
+
     <header class="header">
 
   <div class="mobile-menu">
@@ -49,7 +51,7 @@
 
       <div class="mobile-menu__top">
         <a class="logo" href="#">
-          <img src="images/logo-green.svg" alt="">
+          <img src="images/logo-green.svg" alt="Логоти">
         </a>
 
         <button class="mobile-menu__close" type="button" aria-label="Закрыть меню"></button>
@@ -273,12 +275,10 @@
         </button>
       </div>
       <ul class="cart__list">
-       <li class="cart__item">
+        <li class="cart__item">
           <article class="product-card product-card--cart">
             <div class="product-card__img">
-              <img
-                src="images/products/top/p-1.jpg"
-                alt="Ананас">
+              <img src="images/products/top/p-1.jpg" alt="Ананас">
             </div>
             <div class="product-card__info">
               <h3 class="product-card__name"><a href="#">Ананас, 1кг</a></h3>
@@ -287,15 +287,17 @@
               </div>
             </div>
             <div class="product-card__actions">
-              <button class="product-card__action product-card__action--decrease">-</button>
+              <button class="product-card__action product-card__action--decrease" type="button"
+                aria-label="Уменьшить количество товара">-</button>
               <input class="product-card__quantity" type="number" value="2" data-price="999" readonly>
-              <button class="product-card__action product-card__action--increase">+</button>
+              <button class="product-card__action product-card__action--increase" type="button"
+                aria-label="Увеличить количество товара">+</button>
               <div class="product-card__subtotal-price"></div>
             </div>
 
             <button class="product-card__close" type="button" aria-label="Удалить товар из корзину"></button>
           </article>
-        </li> 
+        </li>
       </ul>
 
       <div class="cart__bottom">
@@ -333,13 +335,13 @@
     <div class="product-section__wrapper">
       <div class="product-section__preview carousel">
         <div class="carousel__slide">
-          <img src="images/products/single/p-1.jpg" alt="">
+          <img src="images/products/single/p-1.jpg" alt="Питахайя">
         </div>
         <div class="carousel__slide">
-          <img src="images/products/single/p-1.jpg" alt="">
+          <img src="images/products/single/p-1.jpg" alt="Питахайя">
         </div>
         <div class="carousel__slide">
-          <img src="images/products/single/p-1.jpg" alt="">
+          <img src="images/products/single/p-1.jpg" alt="Питахайя">
         </div>
       </div>
 
@@ -380,20 +382,23 @@
 
         <div class="product-info__actions">
           <div class="product-info__counter">
-            <button class="product-info__action product-info__action--decrease">
+            <button class="product-info__action product-info__action--decrease" type="button"
+              aria-label="Уменьшить количество товара">
               <svg>
                 <use xlink:href="images/sprite.svg#minus"></use>
               </svg>
             </button>
             <input class="product-info__quantity" type="number" value="1" data-price="999" readonly>
-            <button class="product-info__action product-info__action__action--increase">
+            <button class="product-info__action product-info__action__action--increase" type="button"
+              aria-label="Увеличить количество товара">
               <svg>
                 <use xlink:href="images/sprite.svg#plus"></use>
               </svg>
             </button>
           </div>
-          <button class="product-info__add-cart button button--green"><span>ДОБАВИТЬ В КОРЗИНУ</span></button>
-          <button class="product-info__favorite"></button>
+          <button class="product-info__add-cart button button--green" type="button"
+            aria-label="Добавить в корзину"><span>ДОБАВИТЬ В КОРЗИНУ</span></button>
+          <button class="product-info__favorite" type="button" aria-label="Добавить в желания"></button>
         </div>
 
         <div class="product-info__detail">
@@ -416,13 +421,13 @@
   <div class="tab">
     <ul class="tab__list">
       <li class="tab__item ">
-        <button class="tab__button tab__button--active">ОПИСАНИЕ</button>
+        <button class="tab__button tab__button--active" type="button">Описание</button>
       </li>
       <li class="tab__item">
-        <button class="tab__button">ХАРАКТЕРИСТИКИ</button>
+        <button class="tab__button" type="button">Характеристики</button>
       </li>
       <li class="tab__item">
-        <button class="tab__button">ОТЗЫВЫ (<span></span>)</button>
+        <button class="tab__button" type="button">Отзывы (<span>2</span>)</button>
       </li>
     </ul>
     <div class="tab__body">
@@ -460,7 +465,7 @@
             <article class="review">
               <div class="review__top">
                 <div class="review__top-info">
-                  <img class="review__img" src="images/review.jpg" alt="">
+                  <img class="review__img" src="images/review.jpg" alt="Аватар">
                   <div class="">
                     <h4 class="review__name">Андрей</h4>
                     <time class="review__date">10.06.2021</time>
@@ -492,7 +497,7 @@
             <article class="review">
               <div class="review__top">
                 <div class="review__top-info">
-                  <img class="review__img" src="images/review.jpg" alt="">
+                  <img class="review__img" src="images/review.jpg" alt="Аватар">
                   <div class="review__data">
                     <h4 class="review__name">Екатерина Белая</h4>
                     <time class="review__date">7.06.2021</time>
@@ -595,12 +600,14 @@
           вас может заинтересовать
         </h2>
         <div class="recommendations__arrows swiper-navigation">
-          <button id="swiperPrev" class="recommendations__arrow recommendations__arrow--prev arrow-prev">
+          <button class="recommendations__arrow recommendations__arrow--prev arrow-prev" type="button" id="swiperPrev"
+            aria-label="Предыдущий слайд">
             <svg>
               <use xlink:href="images/sprite.svg#chevron"></use>
             </svg>
           </button>
-          <button id="swiperNext" class="recommendations__arrow recommendations__arrow--next arrow-next">
+          <button class="recommendations__arrow recommendations__arrow--next arrow-next" id="swiperNext" type="button"
+            aria-label="Следующий слайд">
             <svg>
               <use xlink:href="images/sprite.svg#chevron"></use>
             </svg>
@@ -896,7 +903,7 @@
   <div class="footer__top">
     <div class="container">
       <a class="logo" href="#">
-        <img src="images/logo.png" alt="">
+        <img src="images/logo.png" alt="Логотип">
       </a>
     </div>
   </div>

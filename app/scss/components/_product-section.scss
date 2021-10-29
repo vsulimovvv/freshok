@@ -48,8 +48,6 @@
         }
       }
 
-
-
       &__dots {
         display: none;
       }
@@ -72,7 +70,8 @@
   }
 
   &__title {
-    font-family: $RudaSemibold;
+    font-family: $Ruda;
+    font-weight: 600;
     text-align: left;
     text-transform: none;
     margin-bottom: 15px;
@@ -87,7 +86,8 @@
 
 .product-info {
   &__title {
-    font-family: $RudaSemibold;
+    font-family: $Ruda;
+    font-weight: 600;
     font-size: 18px;
     line-height: 1.2;
     letter-spacing: 0.03em;
@@ -172,7 +172,8 @@
   }
 
   &__title {
-    font-family: $RudaSemibold;
+    font-family: $Ruda;
+    font-weight: 600;
     text-transform: none;
     font-size: 18px;
     line-height: 1.2;
@@ -264,7 +265,6 @@
   .product-card__price--old {
     margin-bottom: 0;
     padding-top: 5px;
-
   }
 
   .product-card__price {

@@ -1,13 +1,13 @@
 <section class="catalog">
   <div class="container">
-    <h2 class="catalog__title section-title">Каталог товаров</h2>
+    <h1 class="catalog__title section-title">Каталог товаров</h1>
     <div class="catalog__wrapper">
-      <aside class="catalog__sidebar sidebar">
+      <div class="catalog__sidebar sidebar">
         <div class="sidebar__container">
           <button class="sidebar__close" type="button" aria-label="Закрыть фильтры"></button>
-          <div class="sidebar__box sidebar-box sidebar-box--categories">
+          <section class="sidebar__box sidebar-box sidebar-box--categories">
             <div class="sidebar-box__top">
-              <h3 class="sidebar-box__title">Категории</h3>
+              <h2 class="sidebar-box__title">Категории</h2>
             </div>
             <div class="sidebar-box__drop">
               <ul class="sidebar-box__list">
@@ -40,10 +40,10 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="sidebar__box sidebar-box sidebar-box--offers">
+          </section>
+          <section class="sidebar__box sidebar-box sidebar-box--offers">
             <div class="sidebar-box__top">
-              <h3 class="sidebar-box__title">Предложения</h3>
+              <h2 class="sidebar-box__title">Предложения</h2>
             </div>
             <div class="sidebar-box__drop">
               <ul class="sidebar-box__list">
@@ -77,10 +77,10 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="sidebar__box sidebar-box sidebar-box--brands">
+          </section>
+          <section class="sidebar__box sidebar-box sidebar-box--brands">
             <div class="sidebar-box__top">
-              <h3 class="sidebar-box__title">Бренд</h3>
+              <h2 class="sidebar-box__title">Бренд</h2>
             </div>
             <div class="sidebar-box__drop">
               <ul class="sidebar-box__list">
@@ -143,10 +143,10 @@
 
               </ul>
             </div>
-          </div>
-          <div class="sidebar__box sidebar-box sidebar-box--price">
+          </section>
+          <section class="sidebar__box sidebar-box sidebar-box--price">
             <div class="sidebar-box__top">
-              <h3 class="sidebar-box__title">Цена</h3>
+              <h2 class="sidebar-box__title">Цена</h2>
             </div>
             <div class="sidebar-box__drop">
               <div class="sidebar-box__inputs">
@@ -163,23 +163,32 @@
               </div>
               <div class="sidebar-box__slider range-slider" id="range-slider"></div>
             </div>
-          </div>
+          </section>
         </div>
-      </aside>
-      <div class="catalog__content">
-        <div class="catalog__actions filter-actions">
+      </div>
 
+      <section class="catalog__content">
+        <h2 class="visually-hidden">Список товаров</h2>
+        <div class="catalog__actions filter-actions">
           <button class="filter-actions__button filter-actions__button--show-filter" type="button"
             aria-label="Показать фильтры"></button>
 
           <div class="filter-actions__select">
             <select class="select" name="select-1" id="select-1">
               <option value="1">По названию</option>
+              <option value="1">По популярности</option>
+              <option value="1">Сначала дешевые</option>
+              <option value="1">Сначала дорогие</option>
+              <option value="1">По алфавиту</option>
             </select>
           </div>
           <div class="filter-actions__select">
-            <select class="select" name="select-1" id="select-1">
+            <select class="select" name="select-2" id="select-2">
               <option value="1">по 12</option>
+              <option value="1">по 18</option>
+              <option value="1">по 24</option>
+              <option value="1">по 30</option>
+              <option value="1">по 36</option>
             </select>
           </div>
 
@@ -610,15 +619,11 @@
 
         <div class="catalog__bottom">
           <button class="catalog__button button button--green">Показать еще</button>
-          <div class="catalog__pagination pagination">
 
+          <div class="catalog__pagination pagination">
             <ul class="pagination__list">
               <li class="pagination__item">
-                <button class="pagination__button">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#chevron"></use>
-                  </svg>
-                </button>
+                <a class="pagination__link pagination__link--prev" href="#"></a>
               </li>
 
               <li class="pagination__item pagination__item--active">
@@ -636,18 +641,14 @@
               <li class="pagination__item">
                 <a class="pagination__link" href="#">10</a>
               </li>
+
               <li class="pagination__item">
-                <button class="pagination__button">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#chevron"></use>
-                  </svg>
-                </button>
+                <a class="pagination__link pagination__link--next" href="#"></a>
               </li>
             </ul>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
   </div>
 </section>

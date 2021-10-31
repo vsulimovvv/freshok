@@ -74,27 +74,27 @@
   &__dots {
     display: none;
 
-    @include breakpointsMaxW($bp-768) {
+    @include breakpointsMaxW($bp-991) {
       display: block;
-
-      .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #fff !important;
-        border: 1px solid #C1C1C1;
-        margin: 0 !important;
-
-        &:not(:last-child) {
-          margin-right: 12px !important;
-        }
-      }
-
-      .swiper-pagination-bullet-active {
-        background-color: var(--color-green-900) !important;
-        border: 1px solid var(--color-green-900);
-      }
     }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--color-green-900);
+    border-color: var(--color-green-900);
   }
 
   .swiper-button-prev,
@@ -139,7 +139,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    @include breakpointsMaxW($bp-768) {
+    @include breakpointsMaxW($bp-991) {
       display: none;
     }
   }

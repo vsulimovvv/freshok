@@ -150,10 +150,38 @@
     align-items: center;
     transition: 150ms ease-in;
 
-    @include breakpointsMaxW($bp-991) {
-      span {
-        display: none;
+    &--address,
+    &--tel {
+      padding-left: 45px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-color: var(--color-white);
       }
+    }
+
+    &--address {
+      &::after {
+        mask: url('../images/sprite.svg#delivery') no-repeat center/cover;
+        width: 32px;
+      }
+    }
+
+    &--tel {
+      &::after {
+        mask: url('../images/sprite.svg#tel') no-repeat center/cover;
+        width: 22px;
+      }
+    }
+
+    @include breakpointsMaxW($bp-991) {
+   font-size: 0;
     }
 
     &:hover {

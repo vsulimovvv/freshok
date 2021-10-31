@@ -3,22 +3,6 @@
   z-index: var(--z-1);
   max-width: 240px;
 
-  &__divider {
-    z-index: var(--z-10);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3px;
-    height: 100%;
-    background-color: var(--color-green-900);
-    transition: 0.3s ease-in-out;
-    opacity: 0;
-
-    &.active {
-      opacity: 1;
-    }
-  }
-
   &__button {
     background-color: var(--color-white);
     color: var(--color-green-900);
@@ -84,7 +68,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // z-index: var(--z-10);
     z-index: 9999;
     background-color: #fff;
     display: flex;
@@ -97,6 +80,25 @@
 
   &__item {
     position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: var(--z-10);
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background-color: var(--color-green-900);
+      transition: 150ms ease-in-out;
+      opacity: 0;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
   }
 
   &__link {

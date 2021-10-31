@@ -12,7 +12,9 @@
   <!--  -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!--  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+    integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--  -->
   <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;600;700&display=swap" rel="stylesheet">
   <!--  -->
@@ -22,21 +24,23 @@
 
 <body>
   <div class="overlay"></div>
+
   <div class="wrapper">
     @include('./components/_header.html')
-    <main class="main">
-      <div class="breadcrumbs">
-        <div class="container">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__lint" href="#">Главная </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__lint" href="#">Каталог товаров </a>
-            </li>
-          </ul>
-        </div>
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Главная </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Каталог товаров </a>
+          </li>
+        </ul>
       </div>
+    </div>
+
+    <main class="main">
       @include('./components/_catalog-grid.html')
       @include('./components/_advantages.html')
     </main>

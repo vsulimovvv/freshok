@@ -9,13 +9,13 @@ const productBtn = document.querySelectorAll('.product-card__cart');
 const totalPriceWrapper = document.querySelector('.cart__total-price');
 
 let quantityProduct = 0;
-
+// user-menu__button--cart
 const actions = {
   plus: 'plus',
   minus: 'minus'
 };
 
-const cartQuantityEl = document.querySelector('.user-menu__item--cart .user-menu__amount');
+const cartQuantityEl = document.querySelector('.user-menu__button--cart + .user-menu__amount');
 
 function updateProductsInCart(amount) {
   cartQuantityEl.textContent = amount;
@@ -27,28 +27,29 @@ function generateRandomId() {
 
 function generateCardProduct(img, title, price, id) {
   return `
-        <li class="cart__item">
-          <article class="product-card product-card--cart" data-id=${id}>
-            <div class="product-card__img">
-              <img
-                src="${img}"
-                alt="Ананас">
+      <li class="cart__item">
+        <article class="product-card product-card--cart">
+          <div class="product-card__img">
+            <img src="${img}" alt="${title}">
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name"><a href="#">${title}</a></h3>
+            <div class="product-card__prices">
+              <span class="product-card__price product-card__price--new">${price} ₽</span>
             </div>
-            <div class="product-card__bottom">
-              <h3 class="product-card__name"><a href="#">${title}</a></h3>
-              <div class="product-card__prices">
-                <span class="product-card__price product-card__price--new">${price} ₽</span>
-              </div>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action product-card__action--decrease">-</button>
-              <input class="product-card__quantity" type="number" value="${1}" data-price="${price}" readonly>
-              <button class="product-card__action product-card__action--increase">+</button>
-              <div class="product-card__subtotal-price">${price}</div>
-            </div>
-            <button class="product-card__close" type="button" aria-label="Удалить товар из корзину"></button>
-          </article>
-        </li>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__action product-card__action--decrease" type="button"
+              aria-label="Уменьшить количество товара">-</button>
+            <input class="product-card__quantity" type="number" value="${1}" data-price="${price}">
+            <button class="product-card__action product-card__action--increase" type="button"
+              aria-label="Увеличить количество товара">+</button>
+          </div>
+          <div class="product-card__subtotal-price">${price}</div>
+
+          <button class="product-card__close" type="button" aria-label="Удалить товар из корзину"></button>
+        </article>
+      </li>
   `;
 };
 
@@ -157,4 +158,3 @@ cartBodyEl.addEventListener('click', e => {
 
 // ! Надо подумать
 // init();
-

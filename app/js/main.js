@@ -2,31 +2,6 @@ window.addEventListener('DOMContentLoaded', e => {
   // sliderSingleProduct();
 });
 
-const hoverMenuDropdown = () => {
-  // const parentEl = document.querySelector('.dropdown');
-  const lineEl = document.querySelector('.dropdown__divider');
-  const itemEl = document.querySelectorAll('.dropdown__item');
-
-  lineEl.style.height = `${itemEl[0].offsetHeight}px`;
-  itemEl.forEach((el) => {
-    el.addEventListener('mouseenter', (e) => {
-
-      let target = e.currentTarget;
-      lineEl.classList.add('active');
-      lineEl.style.height = `${target.offsetHeight}px`;
-      lineEl.style.top = `${target.offsetTop}px`;
-    });
-  });
-  itemEl.forEach((el) => {
-    el.addEventListener('mouseleave', (e) => {
-      lineEl.classList.remove('active');
-      lineEl.style.height = `${itemEl[0].offsetHeight}px`;
-      lineEl.style.top = `0px`;
-    });
-  });
-}
-hoverMenuDropdown();
-
 const togglePopup = (popup, popupBtn) => {
   const popupParentEl = document.querySelector(popup);
   const popupBtnEl = document.querySelector(popupBtn);
@@ -37,7 +12,7 @@ const togglePopup = (popup, popupBtn) => {
     })
   }
 }
-togglePopup('.form-search--mobile', '.user-menu__item--search');
+togglePopup('.form-search--mobile', '.user-menu__button--search');
 togglePopup('.dropdown', '.dropdown__button');
 // togglePopup('.sidebar', '.filter-actions__button--filter');
 
@@ -77,7 +52,7 @@ const modals = () => {
     };
   };
 
-  bindModal('.user-menu__item--cart', '.cart', '.cart__close', '.overlay');
+  bindModal('.user-menu__button--cart', '.cart', '.cart__close', '.overlay');
   bindModal('.header__toggle', '.mobile-menu', '.mobile-menu__close', '.overlay');
   bindModal('.filter-actions__button--show-filter', '.catalog__sidebar', '.sidebar__close', '.overlay');
   bindModal('.product-section__preview', '.slider-popup', '.slider-popup__close', '.overlay');
